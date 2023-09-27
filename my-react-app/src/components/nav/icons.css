@@ -1,5 +1,19 @@
 *{
-    height: 100vh;
-    background-color: black;
+    /* height: 100vh; */
+    
 }
-h1{color: aliceblue;}
+
+.navbar{
+    background-image: url(./navIcons/Backgroundimage1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.round-buttons{
+  
+        border-radius: 50%; /* Makes the button round */
+        
+    
+}
