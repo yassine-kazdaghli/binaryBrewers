@@ -19,7 +19,7 @@ const WallPaper = styled('div')({
   top: 0,
   left: 0,
   overflow: 'hidden',
-  background: 'linear-gradient(rgb(255, 38, 142) 0%, rgb(255, 105, 79) 100%)',
+  
   transition: 'all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s',
   '&:before': {
     content: '""',
@@ -89,7 +89,7 @@ export default function MusicPlayerSlider() {
   }
   const mainIconColor = theme.palette.mode === 'dark' ? '#fff' : '#000';
   const lightIconColor =
-    theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)';
+    theme.palette.mode === 'dark' ? 'rgba(0,0,0.4)' : 'rgba(0,0,0,0.4)';
   return (
     <Box sx={{ width: '100%', overflow: 'hidden' }}>
       <Widget>
@@ -108,7 +108,7 @@ export default function MusicPlayerSlider() {
               <b>some song(Can&apos;t win)</b>
             </Typography>
             <Typography noWrap letterSpacing={-0.25}>
-              Chilling Sunday &mdash;blues
+              Chilling Sunday &mdash;
             </Typography>
           </Box>
         </Box>
