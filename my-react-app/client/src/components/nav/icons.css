@@ -1,11 +1,8 @@
-*{
-    /* height: 100vh; */
-    
-}
+
 
 .navbar{
    
-    background-image: url(./navIcons/Backgroundimage1small.png);
+  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +11,10 @@
 
 .round-buttons{
   
-        border-radius: 50%; /* Makes the button round */
+        border-radius: 80%; /* Makes the button round */
         
     
+}
+img{
+    height: 5rem;
 }

@@ -1,5 +1,5 @@
 .card{
-    height: 250px;
-    width: 250px;
-
+    width: max-content;
+    height: max-content;
+    
 }

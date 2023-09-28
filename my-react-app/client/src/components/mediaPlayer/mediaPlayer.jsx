@@ -19,8 +19,7 @@ const WallPaper = styled('div')({
   top: 0,
   left: 0,
   overflow: 'hidden',
-  
-  transition: 'all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s',
+  zIndex: -1, // Set a lower z-index to make it appear behind the player
   '&:before': {
     content: '""',
     width: '140%',
@@ -28,20 +27,17 @@ const WallPaper = styled('div')({
     position: 'absolute',
     top: '-40%',
     right: '-50%',
-    background:
-      'radial-gradient(at center center, rgb(62, 79, 249) 0%, rgba(62, 79, 249, 0) 64%)',
+    // Add any background image or gradient here for the see-through effect
+    background: 'linear-gradient(to bottom, rgba(1, 1, 8, 0.5), rgba(0, 0, 8, 0.2))',
   },
-  '&:after': {
-    content: '""',
-    width: '140%',
-    height: '140%',
-    position: 'absolute',
-    bottom: '-50%',
-    left: '-30%',
-    background:
-      'radial-gradient(at center center, rgb(247, 237, 225) 0%, rgba(247, 237, 225, 0) 70%)',
-    transform: 'rotate(30deg)',
-  },
+});
+
+const FixedPlayer = styled('div')({
+  position: 'fixed',
+  bottom: 0,
+  left: 0,
+  width: '100%',
+  zIndex: 1,
 });
 
 const Widget = styled('div')(({ theme }) => ({
@@ -91,9 +87,10 @@ export default function MusicPlayerSlider() {
   const lightIconColor =
     theme.palette.mode === 'dark' ? 'rgba(0,0,0.4)' : 'rgba(0,0,0,0.4)';
   return (
-    <Box sx={{ width: '100%', overflow: 'hidden' }}>
-      <Widget>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+    <FixedPlayer>
+    <Box sx={{ width: '100vw', overflow: 'hidden' ,display:'flex' , justifySelf:'flex-end' ,height:'max-content'}}>
+      <Widget sx={{width:'100vw'}}>
+        <Box sx={{ width:'100vw', display: 'flex', alignItems: 'center' }}>
           <CoverImage>
             <img
               alt="can't win - Chilling Sunday"
@@ -191,7 +188,7 @@ export default function MusicPlayerSlider() {
           <Slider
             aria-label="Volume"
             defaultValue={30}
-            sx={{
+            sx={{ width:'5%',
               color: theme.palette.mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.87)',
               '& .MuiSlider-track': {
                 border: 'none',
@@ -214,5 +211,6 @@ export default function MusicPlayerSlider() {
       </Widget>
       <WallPaper />
     </Box>
+    </FixedPlayer>
   );
 }

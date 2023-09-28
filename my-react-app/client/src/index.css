@@ -1,0 +1,11 @@
+.body{
+    background-color: rgba(0, 0, 0, 0.315);
+}
+.cards{
+    margin-top: 15rem ;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+    height: 175vh;
+}
