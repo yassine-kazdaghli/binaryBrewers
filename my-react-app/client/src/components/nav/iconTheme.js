@@ -11,7 +11,10 @@ const theme = createTheme({
           /* You can also specify a fixed width and height for a consistent circle */
           width: '7rem',
           height: '7rem',
-          margin: '0 auto',
+          justifyContent: 'center',
+          marginLeft:"20vw",
+          
+          
           
          
         },
@@ -21,9 +24,11 @@ const theme = createTheme({
       styleOverrides:{
         root:{
           backgroundColor:'transparent',
-          backdropFilter:'blur 10px',
-          borderBottom:'1px solid rgba(255,255,255)',
-          height:'10rem',
+          backdropFilter:'blur (1px)',
+          borderBottom:'1px solid black)',
+          height:'max-content',
+          marginTop:"0"
+          
           
           
         },

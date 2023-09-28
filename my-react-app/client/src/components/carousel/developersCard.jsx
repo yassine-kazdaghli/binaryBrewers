@@ -44,8 +44,13 @@ const DevelopersCard = () => {
       stopOnHover={true}
       emulateTouch={true}
       swipeable={true}
-      dynamicHeight={false}
+      centerSlidePercentage={45}
       centerMode={true}
+      dynamicHeight={false}
+      width="45vw"
+      useKeyboardArrows={true}
+      autoFocus={true}
+      
     >
       {carouselData.map((item, index) => (
         <div key={index}>

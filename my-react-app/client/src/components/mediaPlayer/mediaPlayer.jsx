@@ -50,11 +50,11 @@ const Widget = styled('div')(({ theme }) => ({
   zIndex: 1,
   backgroundColor:
     theme.palette.mode === 'dark' ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.4)',
-  backdropFilter: 'blur(40px)',
+  backdropFilter: 'blur(1px)',
 }));
 
 const CoverImage = styled('div')({
-  width: 100,
+  width: 90,
   height: 100,
   objectFit: 'cover',
   overflow: 'hidden',

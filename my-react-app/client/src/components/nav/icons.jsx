@@ -12,20 +12,22 @@ import theme from './iconTheme'; // Import your custom theme
 import Login from '../signup/login';
 import CardExampleCard from '../podcastCard/podcastCard';
 import MusicPlayerSlider from '../mediaPlayer/mediaPlayer';
+import App from '../../App';
 
 const Icons = () => {
   return (
     <>
     
       <ThemeProvider theme={theme}>
-        <AppBar position="fixed" className="navbar" elevation={24} style={{ width: '100vw' }}>
-          <div style={{ backdropFilter: 'blur(10px)', backgroundColor: 'transparent', width: '100vw' }}>
+        <AppBar position="fixed" className="navbar" elevation={1} style={{ width: '100vw' , marginTop:"0"}}>
+          <div style={{ backdropFilter: 'blur(1px)', backgroundColor: 'transparent', width: '100vw' , margin:"0 auto"}}>
             <Toolbar>
-              <Link to="/home">
+              <Link to="/podcasts">
                 <Button
                   variant="contained"
                   startIcon={<img src={podcastIcon} alt="podcastIcon" style={{ width: '6rem', height: '6rem' }} />}
-                  style={{ background: 'none', marginRight: '2rem' }}
+                  style={{ marginRight: '2rem',backgroundColor:'transparent',
+                  backdropFilter:'blur (1px)' }}
                 >
                   {/* Button content */}
                 </Button>
@@ -54,9 +56,9 @@ const Icons = () => {
       </ThemeProvider>
       
       <Routes>
-        <Route path="/home" element={<Login/>} />
-        <Route path="/about" element={CardExampleCard} />
-        <Route path="/signup" element={MusicPlayerSlider} />
+        <Route path="/podcasts" element={<Login/>} />
+        <Route path="/about" element={<Login/>} />
+        <Route path="/signup" element={<MusicPlayerSlider/>} />
       </Routes>
       </>
   );
