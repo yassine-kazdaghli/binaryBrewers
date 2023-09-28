@@ -7,10 +7,25 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '60%', // Makes the button round
+          borderRadius: '50px', // Makes the button round
           /* You can also specify a fixed width and height for a consistent circle */
-          /* width: '50px',
-          height: '50px', */
+          width: '7rem',
+          height: '7rem',
+          margin: '0 auto',
+          
+         
+        },
+      },
+    },
+    MuiAppBar:{
+      styleOverrides:{
+        root:{
+          backgroundColor:'transparent',
+          backdropFilter:'blur 10px',
+          borderBottom:'1px solid rgba(255,255,255)',
+          height:'10rem',
+          
+          
         },
       },
     },

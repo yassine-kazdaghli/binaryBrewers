@@ -2,8 +2,11 @@ import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 import './podcastCard.css'
 
+
 const CardExampleCard = () => (
-  <Card className='card'>
+ 
+  <div className='card'>
+  <Card >
     <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
     <Card.Content>
       <Card.Header>Matthew</Card.Header>
@@ -21,6 +24,8 @@ const CardExampleCard = () => (
       </a>
     </Card.Content>
   </Card>
+  </div>
+  
 )
 
 export default CardExampleCard
