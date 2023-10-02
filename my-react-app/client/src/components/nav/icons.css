@@ -13,9 +13,26 @@
   
         border-radius: 80%; /* Makes the button round */
       
-        
+          
     
 }
+
+.tooltip-center::after {
+    content: ''; /* Empty content */
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  /* Add the animation */
+  .shrink-button {
+    transition: transform 1.0s ease-in-out; 
+  }
+  
+  .shrink-button:hover {
+    transform: scale(0.70); 
+  }
+
 img{
     height: 5rem;
 }

@@ -13,42 +13,61 @@ import Login from '../signup/login';
 import CardExampleCard from '../podcastCard/podcastCard';
 import MusicPlayerSlider from '../mediaPlayer/mediaPlayer';
 import App from '../../App';
+import Tooltip from '@mui/material/Tooltip';
 
 const Icons = () => {
   return (
     <>
-    
       <ThemeProvider theme={theme}>
-        <AppBar position="fixed" className="navbar" elevation={1} style={{ width: '100vw' , marginTop:"0"}}>
-          <div style={{ backdropFilter: 'blur(1px)', backgroundColor: 'transparent', width: '100vw' , margin:"0 auto"}}>
+        <AppBar position="fixed" className="navbar" elevation={1} style={{ width: '100vw', marginTop: '0' }}>
+          <div style={{ backdropFilter: 'blur(1px)', backgroundColor: 'transparent', width: '100vw', margin: '0 auto' }}>
             <Toolbar>
               <Link to="/podcasts">
-                <Button
-                  variant="contained"
-                  startIcon={<img src={podcastIcon} alt="podcastIcon" style={{ width: '6rem', height: '6rem' }} />}
-                  style={{ marginRight: '2rem',backgroundColor:'transparent',
-                  backdropFilter:'blur (1px)' }}
-                >
-                  {/* Button content */}
-                </Button>
+                <Tooltip title="Podcasts" arrow>
+                  <Button
+                    variant="contained"
+                    startIcon={<img src={podcastIcon} alt="podcastIcon" style={{ width: '8rem', height: '8rem' }} />}
+                    style={{
+                      marginRight: '2rem',
+                      backgroundColor: 'transparent',
+                      backdropFilter: 'blur(1px)',
+                      
+                    }}
+                    className="shrink-button"
+                  >
+                    {/* Button content */}
+                  </Button>
+                </Tooltip>
+                {/* Apply the tooltip centering style */}
+                <span className="tooltip-center"></span>
               </Link>
               <Link to="/about">
-                <Button
-                  variant="contained"
-                  startIcon={<img src={videoIcon} alt="videoIcon" style={{ width: '6rem', height: '6rem' }} />}
-                  style={{ background: 'none', marginRight: '2rem' }}
-                >
-                  {/* Button content */}
-                </Button>
+                <Tooltip title="Video" arrow>
+                  <Button
+                    variant="contained"
+                    startIcon={<img src={videoIcon} alt="videoIcon" style={{ width: '8rem', height: '8rem' }} />}
+                    style={{ background: 'none', marginRight: '2rem' }}
+                    className="shrink-button"
+                  >
+                    {/* Button content */}
+                  </Button>
+                </Tooltip>
+                {/* Apply the tooltip centering style */}
+                <span className="tooltip-center"></span>
               </Link>
               <Link to="/signup">
-                <Button
-                  variant="contained"
-                  startIcon={<img src={messageIcon} alt="messageIcon" style={{ width: '5rem', height: '5rem' }} />}
-                  style={{ background: 'none' }}
-                >
-                  {/* Button content */}
-                </Button>
+                <Tooltip title="Contact" arrow>
+                  <Button
+                    variant="contained"
+                    startIcon={<img src={messageIcon} alt="messageIcon" style={{ width: '8rem', height: '8rem' }} />}
+                    style={{ background: 'none' }}
+                    className="shrink-button"
+                  >
+                    {/* Button content */}
+                  </Button>
+                </Tooltip>
+                {/* Apply the tooltip centering style */}
+                <span className="tooltip-center"></span>
               </Link>
             </Toolbar>
           </div>
