@@ -1,4 +1,15 @@
-
+@media (max-width: 768px) {
+    .burger-menu {
+      display: block; /* Show the burger menu button */
+    }
+  }
+  
+  /* CSS for larger screens (e.g., desktop) */
+  @media (min-width: 769px) {
+    .burger-menu {
+      display: none; /* Hide the burger menu button */
+    }
+  }
 
 .navbar{
    

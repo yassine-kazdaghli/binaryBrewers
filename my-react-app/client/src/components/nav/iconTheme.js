@@ -9,8 +9,8 @@ const theme = createTheme({
         root: {
           borderRadius: '50px', // Makes the button round
           /* You can also specify a fixed width and height for a consistent circle */
-          width: '7rem',
-          height: '7rem',
+          width: '6rem',
+          height: '6rem',
           justifyContent: 'center',
           marginLeft:"20vw",
           
