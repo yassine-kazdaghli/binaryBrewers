@@ -15,7 +15,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "./iconTheme"; 
+import theme from "./iconTheme";
+import textBinaryBrewers from "../nav/navIcons/textBinaryBrewers.png"
+
+
+
 const drawerWidth = 240;
 const navItems = ['Home', 'Podcasts', 'Projects', 'contact', 'login'];
 
@@ -30,7 +34,7 @@ function Navigation(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Binary Brewers
       </Typography>
       <Divider />
       <List>
@@ -54,6 +58,7 @@ function Navigation(props) {
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
+       
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -63,12 +68,18 @@ function Navigation(props) {
           >
             <MenuIcon />
           </IconButton>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+          {/* Place your image here */}
+          <img src={textBinaryBrewers} alt="Logo" style={{height: '48px', marginRight: '16px' }} /></div>
+          
           <Typography
-            variant="h6"
+            variant="h1"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block'} }}
           >
-            MUI
+            {/* <h1>Binarkjsdf</h1> */}
+            
+            
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
