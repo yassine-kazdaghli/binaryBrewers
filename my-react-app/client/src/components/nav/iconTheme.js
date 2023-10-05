@@ -2,8 +2,9 @@
 // theme.js
 import { createTheme } from '@mui/material/styles';
 
+
 const theme = createTheme({
-  components: {
+  components: 
    
     MuiAppBar:{
       styleOverrides:{
@@ -20,9 +21,15 @@ const theme = createTheme({
           
           
           
+
         },
       },
     },
+  },
+  
+  // Define your custom typography with the font family
+  typography: {
+    fontFamily: 'YourFontFamilyName', // Replace with your font family name
   },
 });
 

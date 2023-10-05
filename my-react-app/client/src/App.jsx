@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Route, Routes } from 'react-router-dom'; // Import Route and Routes
 import './index.css';
@@ -10,10 +11,12 @@ import MusicPlayerSlider from './components/mediaPlayer/mediaPlayer';
 
 import PodcastPage from './components/PodcastPage';
 
+
 function App() {
   return (
     <div>
       <Navigation />
+
       
       <Routes> {/* Use Routes component */}
      
@@ -26,6 +29,7 @@ function App() {
       {/* Your other components */}
       <MusicPlayerSlider />
     </div>
+
   );
 }
 
