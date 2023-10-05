@@ -18,6 +18,7 @@ import Button from '@mui/material/Button';
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./iconTheme";
 import textBinaryBrewers from "../nav/navIcons/textBinaryBrewers.png"
+import { blue } from '@mui/material/colors';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Podcasts', 'Projects', 'contact', 'login'];
@@ -40,8 +41,8 @@ function Navigation(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <Link to={`/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <ListItemButton sx={{ textAlign: 'center',}}>
+              <Link to={`/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'orange' }}>
                 <ListItemText primary={item} />
               </Link>
             </ListItemButton>

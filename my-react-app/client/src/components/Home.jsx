@@ -1,11 +1,11 @@
 import React from 'react';
-import Logo from './nav/logo/logo';
-import { width } from '@mui/system';
+
+import logoWithBinarybrewers from'./nav/logo/logo';
 
 
 function Home() {
   return <div>
-    
+    <img src={logoWithBinarybrewers} alt="" />
    
     </div>;
 }

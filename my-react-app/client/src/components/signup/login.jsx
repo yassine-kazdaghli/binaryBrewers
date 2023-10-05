@@ -12,6 +12,7 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
+import { fontSize } from '@mui/system';
 
  export default function Login() {
 
@@ -45,31 +46,31 @@ from 'mdb-react-ui-kit';
 
         <MDBTabsPane show={justifyActive === 'tab1'}>
 
-          <div className="text-center mb-3">
-            <p>Sign in with:</p>
+          <div className="text-center mb-3" >
+            <p style={{color:'white' ,fontSize:'1.1rem'}}>Sign in with:</p>
 
             <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
               <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                <MDBIcon fab icon='facebook-f' size="sm"/>
+                <MDBIcon fab icon='facebook-f' size="xl"color='white'/>
               </MDBBtn>
 
               <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                <MDBIcon fab icon='twitter' size="sm"/>
+                <MDBIcon fab icon='twitter' size="xl"color='white'/>
               </MDBBtn>
 
               <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                <MDBIcon fab icon='google' size="sm"/>
+                <MDBIcon fab icon='google' size="xl"color='white'/>
               </MDBBtn>
 
-              <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                <MDBIcon fab icon='github' size="sm"/>
+              <MDBBtn tag='a' color='none' className='m-1' style={{ color: 'white' }}>
+                <MDBIcon fab icon='github' size="xl" color='white'/>
               </MDBBtn>
             </div>
 
             <p className="text-center mt-3">or:</p>
           </div>
 
-          <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
+          <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email' style={{color:'white' ,fontSize:'1.1rem'}}/>
           <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
 
           <div className="d-flex justify-content-between mx-4 mb-4">

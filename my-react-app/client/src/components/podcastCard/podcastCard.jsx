@@ -9,15 +9,17 @@ import Typography from '@mui/material/Typography';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
+import podcast from'./podcast.jpg';
+import { height } from '@mui/system';
 
 
 export default function CardExampleCard() {
   const theme = useTheme();
 
   return (
-    <Card sx={{ display: 'flex', width:'35vw', height:'25vh',backgroundColor:'transparent',color:'whitesmoke',border:'1px solid black' }} >
+    <Card sx={{ display: 'flex', width:'35vw', height:'15rem',backgroundColor:'rgba(1,1,1,0.8)',color:'whitesmoke',border:'1px solid black' ,borderRadius:'10px'}} >
       <Box sx={{ display: 'flex', flexDirection: 'row' ,gap:'5rem' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
+        <CardContent sx={{ flex: '1 0 auto', height:'35%' }}>
           <Typography component="div" variant="h5">
             Live From Space
           </Typography>
@@ -40,8 +42,8 @@ export default function CardExampleCard() {
       <CardMedia
         component="img"
         sx={{ width: 151 }}
-        image=""
-        alt="Live from space album cover"
+        src={podcast}
+        alt="Lfrom space album cover"
       />
     </Card>
   );
