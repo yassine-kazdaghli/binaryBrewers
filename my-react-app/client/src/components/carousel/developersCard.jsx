@@ -39,15 +39,15 @@ const DevelopersCard = () => {
       showThumbs={true}
       infiniteLoop={true}
       autoPlay={true}
-      interval={3000}
+      interval={2000}
       transitionTime={200}
       stopOnHover={true}
       emulateTouch={true}
       swipeable={true}
-      centerSlidePercentage={45}
+      centerSlidePercentage={60}
       centerMode={true}
       dynamicHeight={false}
-      width="45vw"
+      width="80%"
       useKeyboardArrows={true}
       autoFocus={true}
       

@@ -1,21 +1,4 @@
+*{box-sizing: border-box;}
 
 
-.navbar{
-   
-  
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-}
 
-.round-buttons{
-  
-        border-radius: 80%; /* Makes the button round */
-      
-        
-    
-}
-img{
-    height: 5rem;
-}
