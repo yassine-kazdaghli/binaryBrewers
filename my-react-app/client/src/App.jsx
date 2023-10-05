@@ -8,7 +8,9 @@ import './index.css'
 function App() {
   return (
     <>
+    <div>
     <Icons/>
+    </div>
     {/* <CardExampleCard/> */}
     {/* <MediaPlayer/> */}
     <div className="developers">

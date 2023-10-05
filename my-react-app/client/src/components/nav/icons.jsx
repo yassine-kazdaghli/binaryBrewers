@@ -20,6 +20,8 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import Logo from './logo/logo.jsx';
+import "./logo/logo.css";
 
 
 const Icons = () => {
@@ -31,10 +33,15 @@ const Icons = () => {
 
   return (
     <>
+    <div><h1>Binary Brewers</h1></div>
       <ThemeProvider theme={theme}>
         <AppBar position="fixed" className="navbar" elevation={1} style={{ width: '100vw', marginTop: '0' }}>
+        
+       
           <div style={{ backdropFilter: 'blur(1px)', backgroundColor: 'transparent', width: '100vw', margin: '0 auto' }}>
+          
             <Toolbar>
+            
               {/* Burger menu button */}
               <IconButton
                 edge="start"
@@ -47,8 +54,11 @@ const Icons = () => {
               </IconButton>
 
               {/* Link to the home page */}
+             
+            
+             
               <Link to="/">
-                <Tooltip title="Home" arrow>
+                <Tooltip title="Podcast" arrow>
                   <Button
                     variant="contained"
                     startIcon={<img src={podcastIcon} alt="podcastIcon" style={{ width: '6rem', height: '6rem' }} />}
@@ -67,7 +77,7 @@ const Icons = () => {
 
               {/* Link to Podcasts */}
               <Link to="/podcasts">
-                <Tooltip title="Podcasts" arrow>
+                <Tooltip title="Video" arrow>
                   <Button
                     variant="contained"
                     startIcon={<img src={videoIcon} alt="podcastIcon" style={{ width: '6rem', height: '6rem' }} />}
@@ -86,7 +96,7 @@ const Icons = () => {
 
               {/* Link to About */}
               <Link to="/about">
-                <Tooltip title="About" arrow>
+                <Tooltip title="Contact" arrow>
                   <Button
                     variant="contained"
                     startIcon={<img src={messageIcon} alt="videoIcon" style={{ width: '6rem', height: '6rem' }} />}
@@ -105,7 +115,7 @@ const Icons = () => {
 
               {/* Link to Sign Up */}
               <Link to="/signup">
-                <Tooltip title="Sign Up" arrow>
+                <Tooltip title="Log In" arrow>
                   <Button
                     variant="contained"
                     startIcon={<img src={messageIcon} alt="messageIcon" style={{ width: '5rem', height: '5rem' }} />}
@@ -120,8 +130,12 @@ const Icons = () => {
                 </Tooltip>
                 <span className="tooltip-center"></span>
               </Link>
+              <div className="navbar-logo">
+      <Logo />
+    </div>
             </Toolbar>
           </div>
+          
         </AppBar>
 
         {/* Drawer for the burger menu */}
