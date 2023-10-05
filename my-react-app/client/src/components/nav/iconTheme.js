@@ -4,22 +4,7 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          borderRadius: '50px', // Makes the button round
-          /* You can also specify a fixed width and height for a consistent circle */
-          width: '6rem',
-          height: '6rem',
-          justifyContent: 'center',
-          marginLeft:"20vw",
-          
-          
-          
-         
-        },
-      },
-    },
+
     MuiAppBar:{
       styleOverrides:{
         root:{
