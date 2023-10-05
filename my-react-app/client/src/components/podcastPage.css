@@ -1,0 +1,10 @@
+.podcasts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    width: 100vw;
+    height: 40vh;
+    margin: 0 auto;
+}
