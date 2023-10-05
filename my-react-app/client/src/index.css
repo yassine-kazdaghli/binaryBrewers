@@ -1,15 +1,15 @@
-.body{
+body{
     background-color: rgba(0, 0, 0, 0.315);
 }
 .cards{
-    margin-top: 15rem ;
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
     justify-content: space-around;
-    height: 175vh;
+    padding: 1rem;
+
 }
-.developers{
-    margin-top: 150px;
-    margin-left: 25%;
+.login{
+    position: relative;
 }

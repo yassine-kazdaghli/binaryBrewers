@@ -25,16 +25,17 @@ function App() {
       <div className="developers">
         <DevelopersCard />
       </div>
-      <div className="body">
+     
         <div className="cards">
           <CardExampleCard />
           <CardExampleCard />
           <CardExampleCard />
           <CardExampleCard />
         </div>
-        <Login />
+      <div className="login">
+        </div>
         <MediaPlayer />
-      </div>
+      
 
     </>
   );

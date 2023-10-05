@@ -32,7 +32,9 @@ const carouselData = [
 
 const DevelopersCard = () => {
   return (
+    
     <Carousel
+    className='carousel'
       showArrows={true}
       showStatus={false}
       showIndicators={true}
@@ -44,20 +46,20 @@ const DevelopersCard = () => {
       stopOnHover={true}
       emulateTouch={true}
       swipeable={true}
-      centerSlidePercentage={60}
+      centerSlidePercentage={35}
       centerMode={true}
       dynamicHeight={false}
-      width="80%"
+      width="100%"
       useKeyboardArrows={true}
       autoFocus={true}
       
     >
       {carouselData.map((item, index) => (
-        <div key={index}>
+        <div key={index} className='Devs'>
           <Card>
             <Image
               src={item.imageUrl}              wrapped
-              ui={false}
+              ui={true}
             />
             <CardContent>
               <Typography variant="h5" component="div">
