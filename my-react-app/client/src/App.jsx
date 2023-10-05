@@ -1,3 +1,4 @@
+
 import React from "react";
 import MediaPlayer from "./components/mediaPlayer/mediaPlayer";
 import MusicPlayerSlider from "./components/mediaPlayer/mediaPlayer";
@@ -34,6 +35,7 @@ function App() {
         <Login />
         <MediaPlayer />
       </div>
+
     </>
   );
 }
