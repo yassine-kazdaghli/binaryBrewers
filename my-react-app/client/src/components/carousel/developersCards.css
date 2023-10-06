@@ -1,5 +1,15 @@
-/* .card{
-    height: 250px;
-    width: 250px;
 
-} */
+.Devs{
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto ;
+    background-color: transparent;
+    padding-left:10rem;
+    padding-top: 2rem;
+    
+}
+.carousel{
+      width: 100vw;
+      background-color: transparent;
+    
+}

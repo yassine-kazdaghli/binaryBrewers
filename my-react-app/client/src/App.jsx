@@ -1,35 +1,38 @@
-import React from 'react';  
-import MediaPlayer from './components/mediaPlayer/mediaPlayer';
-import CardExampleCard from './components/podcastCard/podcastCard';
-import Icons from './components/nav/icons';
-import Login from './components/signup/login';
+
+
+import React from 'react';
+import { Route, Routes } from 'react-router-dom'; // Import Route and Routes
+import './index.css';
+import Navigation from './components/nav/nav.jsx';
+import LoginPage from './components/LoginPage';
+import Home from './components/Home';
 import DevelopersCard from './components/carousel/developersCard';
-import BlogPostList from './components/Blog/BlogPostList'; // Import your BlogPostList component
-import { blogPosts } from './components/Blog/data'; // Import your blog post data
-import './index.css'
+
+
+import MusicPlayerSlider from './components/mediaPlayer/mediaPlayer';
+
+import PodcastPage from './components/PodcastPage';
+
+
 function App() {
   return (
-    <>
-    <Icons/>
-    {/* <CardExampleCard/> */}
-    {/* <MediaPlayer/> */}
-    <div className="developers">
-    <DevelopersCard/>
-    </div>
-    <div className='body'>
-    <div className='cards'>
-    <CardExampleCard/>
-    <CardExampleCard/>
-    <CardExampleCard/>
-    <CardExampleCard/>
-    </div>
-     <Login/> 
-     {/* <MediaPlayer/>  */}
-     <BlogPostList posts={blogPosts} />
-    </div>
-    </>
+    <div>
+      <Navigation />
+
+
       
-    
+      <Routes> {/* Use Routes component */}
+     
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+        <Route path="/podcasts" element={<PodcastPage/>} />
+        <Route path="/about" element={<DevelopersCard />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+      {/* Your other components */}
+      <MusicPlayerSlider />
+    </div>
+
   );
 }
 
