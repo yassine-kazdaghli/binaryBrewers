@@ -1,24 +1,7 @@
-// import React from 'react';
-// import CommentList from './CommentList';
-// import CommentForm from './CommentForm';
-// import './Styles/BlogPost.css'; // Import the CSS file
-
-// const BlogPost = ({ post }) => {
-//   return (
-//     <div>
-//       <h2>{post.title}</h2>
-//       <p>{post.content}</p>
-//       <h3>Comments</h3>
-//       <CommentList comments={post.comments} />
-//       <CommentForm postId={post.id} />
-//     </div>
-//   );
-// };
-
-// export default BlogPost;
-
+// BlogPost.js
 import React, { useState } from 'react';
 import CommentForm from './CommentForm';
+import CommentList from './CommentList'; // You need to import CommentList here
 import './Styles/BlogPost.css';
 
 const BlogPost = ({ post }) => {
@@ -37,13 +20,7 @@ const BlogPost = ({ post }) => {
       <h2>{post.title}</h2>
       <p>{post.content}</p>
       <h3>Comments</h3>
-      <div className="comment-list">
-        {comments.map((comment) => (
-          <div key={comment.id} className="comment">
-            {comment.text}
-          </div>
-        ))}
-      </div>
+      <CommentList comments={comments} /> {/* Render the list of comments */}
       <CommentForm addComment={addComment} />
     </div>
   );

@@ -1,13 +1,15 @@
+// CommentForm.js
 import React, { useState } from "react";
 import './Styles/BlogPost.css';
 
-function CommentForm() {
+function CommentForm({ addComment }) {
   const [comment, setComment] = useState("");
-  const [comments, setComments] = useState([]);
 
   const onClickHandler = () => {
-    setComments((comments) => [...comments, comment]);
-    setComment(""); // Clear the input field after submission
+    if (comment.trim() !== "") {
+      addComment({ text: comment, id: Date.now() }); // Create a comment object with a unique ID
+      setComment(""); // Clear the input field after submission
+    }
   };
 
   const onChangeHandler = (e) => {
@@ -16,11 +18,6 @@ function CommentForm() {
 
   return (
     <div className="main-container">
-      {comments.map((text, index) => (
-        <div key={index} className="comment-container">
-          {text}
-        </div>
-      ))}
       <div className="comment-flexbox">
         <h3 className="comment-text">Comment</h3>
         <textarea
@@ -37,7 +34,4 @@ function CommentForm() {
 }
 
 export default CommentForm;
-
-
-
 

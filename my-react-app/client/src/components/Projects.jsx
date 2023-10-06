@@ -1,11 +1,12 @@
 // Projects.js
 import React from 'react';
-import BlogPost from './Blog/BlogPost';
+
+import BlogPostList from './Blog/BlogPostList';
 
 
 function Projects() {
   return <div>
-    <BlogPost/>
+    <BlogPostList/>
     
   </div>;
 }

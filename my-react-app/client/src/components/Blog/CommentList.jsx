@@ -1,3 +1,4 @@
+// CommentList.js
 import React from 'react';
 
 const CommentList = ({ comments }) => {
