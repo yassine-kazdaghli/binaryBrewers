@@ -1,6 +1,7 @@
 .logo {
   display: flex;
   justify-content: center;
+  filter:invert(1)
 }
 
 .logo img {

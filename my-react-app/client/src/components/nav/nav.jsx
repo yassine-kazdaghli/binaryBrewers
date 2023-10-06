@@ -19,9 +19,10 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./iconTheme";
 import textBinaryBrewers from "../nav/navIcons/textBinaryBrewers.png"
 import { blue } from '@mui/material/colors';
+import { color } from '@mui/system';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Podcasts', 'Projects', 'contact', 'login'];
+const navItems = ['Home', 'About', 'Podcasts', 'Blog', 'contact', 'login'];
 
 function Navigation(props) {
   const { window } = props;
@@ -42,7 +43,7 @@ function Navigation(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center',}}>
-              <Link to={`/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'orange' }}>
+              <Link to={`/${item.toLowerCase()}`} sx={{ textDecoration: 'none', color: 'orange' }}>
                 <ListItemText primary={item} />
               </Link>
             </ListItemButton>
@@ -72,20 +73,20 @@ function Navigation(props) {
               </IconButton>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 {/* Place your image here */}
-                <img src={textBinaryBrewers} alt="Logo" style={{ height: '48px', marginRight: '16px' }} />
+                <img src={textBinaryBrewers} alt="Logo" style={{ height: '48px', marginRight: '16px' ,backgroundColor:'black', borderRadius:'10px',filter: 'invert(100%)'}} />
               </div>
               <Typography
                 variant="h1"
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
               >
-
+            
               </Typography>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
                   <Button
                     key={item}
-                    sx={{ color: '#fff' }}
+                    sx={{ color: 'black' }}
                     onClick={() => navigate(`/${item.toLowerCase()}`)} // Use navigate to change routes
                   >
                     {item}
