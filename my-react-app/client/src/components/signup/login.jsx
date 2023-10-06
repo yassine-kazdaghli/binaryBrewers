@@ -74,14 +74,14 @@ import { fontSize } from '@mui/system';
           <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
 
           <div className="d-flex justify-content-between mx-4 mb-4">
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
-            <a href="!#">Forgot password?</a>
+            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' color='none'/>
+            <a href="!#"style={{color:'white' ,fontSize:'1.1rem'}}>Forgot password?</a>
           </div>
 
           <MDBBtn className="mb-4 w-100">Sign in</MDBBtn>
-          <p className="text-center">Not a member? <a href="#!">Register</a></p>
+          <p className="text-center"style={{color:'whitesmoke' ,fontSize:'1.5rem'}}>Not a member? <a href="#!"style={{color:'whitesmoke' ,fontSize:'1.5rem'}}>Register</a></p>
 
-        </MDBTabsPane>
+        </MDBTabsPane> 
 
         <MDBTabsPane show={justifyActive === 'tab2'}>
 
