@@ -1,10 +1,11 @@
 import React from 'react';
-import Logo from './nav/logo/logo';
+
+import logoWithBinarybrewers from'./nav/logo/logo';
 
 
 function Home() {
   return <div>
-    <Logo/>
+    <img src={logoWithBinarybrewers} alt="" />
    
     </div>;
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import CardExampleCard from './podcastCard/podcastCard';
+import '../../src/components/podcastPage.css'
 
 
 function PodcastPage() {
-  return <div>
+  return <div className='podcasts'>
     <CardExampleCard/>
     <CardExampleCard/>
     <CardExampleCard/>

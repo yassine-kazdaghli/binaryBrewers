@@ -4,7 +4,23 @@ import { createTheme } from '@mui/material/styles';
 
 
 const theme = createTheme({
-  components: {
+
+  components:{ 
+    MuiListItemButton:{styleOverrides:{
+      root:{
+        styleOverrides:{
+          '&:hover': {
+            backgroundColor: 'orange', // Change the background color on hover
+          },
+        },
+        
+        
+        
+
+      },
+    },
+  },
+
    
     MuiAppBar:{
       styleOverrides:{
