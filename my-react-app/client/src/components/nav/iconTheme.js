@@ -4,7 +4,7 @@ import { createTheme } from '@mui/material/styles';
 
 
 const theme = createTheme({
-  components: 
+  components: {
    
     MuiAppBar:{
       styleOverrides:{

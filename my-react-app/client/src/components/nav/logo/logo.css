@@ -1,7 +1,18 @@
-/*  */
-  
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  max-width: 60vh;
+  height: auto; 
+  margin-bottom: 20px;
+
+}
+
+
+@media (max-width: 768px) {
   .logo img {
-    width: 20rem;
-    height: auto;
-    /* Add image-specific styles if needed */
+    max-width: 80%;
   }
+}
