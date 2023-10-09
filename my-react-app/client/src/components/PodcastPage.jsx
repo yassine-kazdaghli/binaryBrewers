@@ -3,6 +3,8 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CardExampleCard from "./podcastCard/podcastCard";
 import "../../src/components/podcastPage.css";
+import MusicPlayerSlider from "./mediaPlayer/mediaPlayer";
+
 function PodcastPage() {
   return (
     <div className="podcasts">
@@ -31,6 +33,7 @@ function PodcastPage() {
         <CardExampleCard />
         {/* Add more CardExampleCard components here if needed */}
       </Carousel>
+      <MusicPlayerSlider />
     </div>
   );
 }

@@ -3,9 +3,8 @@ import { Route, Routes } from "react-router-dom"; // Import Route and Routes
 import "./index.css";
 import Navigation from "./components/nav/nav.jsx";
 import LoginPage from "./components/LoginPage";
-import Home from "./components/projectExample/Home";
+import Home from "./components/Home";
 import DevelopersCard from "./components/carousel/developersCard";
-import MusicPlayerSlider from "./components/mediaPlayer/mediaPlayer";
 import PodcastPage from "./components/PodcastPage";
 import Projects from "./components/Projects";
 import Logo from "./components/nav/logo/logo";
@@ -38,7 +37,7 @@ function App() {
         <Route path="/blog" element={<Projects />} />
       </Routes>
 
-      <MusicPlayerSlider />
+     
     </div>
   );
 }
