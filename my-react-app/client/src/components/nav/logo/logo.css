@@ -1,14 +1,16 @@
 .logo {
   display: flex;
   justify-content: center;
-  filter:invert(1)
+
 }
 
 .logo img {
-  max-width: 60vh;
+  max-width: 200vw;
   height: auto; 
   margin-bottom: 20px;
-
+  border-radius: 5px;
+  background-color: #000000; /* Set the background color to black */
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
 

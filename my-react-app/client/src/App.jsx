@@ -9,15 +9,27 @@ import MusicPlayerSlider from "./components/mediaPlayer/mediaPlayer";
 import PodcastPage from "./components/PodcastPage";
 import Projects from "./components/Projects";
 import Logo from "./components/nav/logo/logo";
+import Particles from "react-particles";
 
 function App() {
+  const particlesConfig = {
+    particles: {
+      number: {
+        value: 100,
+      },
+      size: {
+        value: 3,
+      },
+    },
+  };
   return (
     <div>
-      <Navigation />
+      <div className="interactive-background">
+        <Particles params={particlesConfig} />
+      </div>
 
+      <Navigation />
       <Routes>
-        {" "}
-        {/* Use Routes component */}
         <Route path="/" element={<Logo />} />
         <Route path="/home" element={<Home />} />
         <Route path="/podcasts" element={<PodcastPage />} />
@@ -25,7 +37,6 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/blog" element={<Projects />} />
       </Routes>
-      {/* Your other components */}
 
       <MusicPlayerSlider />
     </div>
