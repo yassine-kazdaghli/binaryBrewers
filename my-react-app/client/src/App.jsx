@@ -9,25 +9,14 @@ import MusicPlayerSlider from "./components/mediaPlayer/mediaPlayer";
 import PodcastPage from "./components/PodcastPage";
 import Projects from "./components/Projects";
 import Logo from "./components/nav/logo/logo";
-import Particles from "react-particles";
+import InteractiveBackground from "./components/InterActiveBackground/interActiveBackground.jsx"
 
 function App() {
-  const particlesConfig = {
-    particles: {
-      number: {
-        value: 100,
-      },
-      size: {
-        value: 3,
-      },
-    },
-  };
+  
   return (
     <div>
-      <div className="interactive-background">
-        <Particles params={particlesConfig} />
-      </div>
-
+      
+      <InteractiveBackground />
       <Navigation />
       <Routes>
         <Route path="/" element={<Logo />} />
@@ -37,8 +26,10 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/blog" element={<Projects />} />
       </Routes>
-
+      
       <MusicPlayerSlider />
+    
+
     </div>
   );
 }
