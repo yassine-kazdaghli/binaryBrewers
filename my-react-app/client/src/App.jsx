@@ -8,17 +8,13 @@ import PodcastPage from "./components/PodcastPage";
 import Projects from "./components/Projects";
 import Logo from "./components/nav/logo/logo";
 
-import InteractiveBackground from "./components/InterActiveBackground/interActiveBackground.jsx"
+import InteractiveBackground from "./components/InterActiveBackground/interActiveBackground.jsx";
 
-import Particles from "react-particles";
 import LoginPageContent from "./components/LoginPage";
 
-
 function App() {
-  
   return (
     <div>
-      
       <InteractiveBackground />
       <Navigation />
       <Routes>
@@ -29,14 +25,6 @@ function App() {
         <Route path="/login" element={<LoginPageContent />} />
         <Route path="/blog" element={<Projects />} />
       </Routes>
-
-      
-      <MusicPlayerSlider />
-    
-
-
-     
-
     </div>
   );
 }
