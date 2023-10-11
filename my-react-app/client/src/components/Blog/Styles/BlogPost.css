@@ -1,9 +1,18 @@
 /* BlogPost.css */
+
+.center-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 55vh; /* Adjust the height as needed for your layout */
+}
+
 .blog-post {
     border: 1px solid black;
     padding: 20px;
     margin: 20px;
     background-color: #fff;
+    border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
@@ -23,6 +32,7 @@
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #ccc;
+    border: 1px solid black;
   }
   
   .comment-form textarea {
@@ -101,7 +111,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  margin: 0 5px 10px 0;
+  margin: 0 auto 10px; /* Center horizontally by using 'auto' for left and right margins */
   overflow: visible;
   padding: 12px 40px;
   text-align: center;

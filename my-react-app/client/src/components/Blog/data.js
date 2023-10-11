@@ -4,7 +4,7 @@ export const blogPosts = [
     {
       id: 1,
       title: 'First Blog Post',
-      content: 'This is the content of the first blog post...',
+      content: 'Living And Working In Germany',
       comments: [
         { id: 1, text: 'Great post!' },
         { id: 2, text: 'Thanks for sharing!' },
