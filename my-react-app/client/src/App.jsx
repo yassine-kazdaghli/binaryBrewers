@@ -9,6 +9,7 @@ import MusicPlayerSlider from "./components/mediaPlayer/mediaPlayer";
 import PodcastPage from "./components/PodcastPage";
 import Projects from "./components/Projects";
 import Logo from "./components/nav/logo/logo";
+import ContactPage from "./components/ContactPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/about" element={<DevelopersCard />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/blog" element={<Projects />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       {/* Your other components */}
 
