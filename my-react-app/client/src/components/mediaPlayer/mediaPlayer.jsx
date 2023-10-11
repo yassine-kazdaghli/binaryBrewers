@@ -28,17 +28,16 @@ const WallPaper = styled('div')({
     top: '-40%',
     right: '-50%',
     // Add any background image or gradient here for the see-through effect
-    background: 'transparent',
-    
+    background: 'linear-gradient(to bottom, rgba(1, 1, 8, 0.5), rgba(0, 0, 8, 0.2))',
   },
 });
 
 const FixedPlayer = styled('div')({
   position: 'fixed',
-  bottom:0,
+  bottom: 0,
   left: 0,
-  width: '100%',
-  marginTop: '2rem'
+  width: '100%',  
+  height:'25vh',
   
 });
 
@@ -89,8 +88,8 @@ export default function MusicPlayerSlider() {
   const lightIconColor =
     theme.palette.mode === 'dark' ? 'rgba(0,0,0.4)' : 'rgba(0,0,0,0.4)';
   return (
-    <FixedPlayer sx={{ }} >
-    <Box sx={{ width: '100vw',  overflow: 'hidden' ,display:'flex' , justifySelf:'flex-end' ,height:'max-content'}}>
+    <FixedPlayer>
+    <Box sx={{ width: '100vw', overflow: 'hidden' ,display:'flex' , justifySelf:'flex-end' ,height:'max-content'}}>
       <Widget sx={{width:'100vw'}}>
         <Box sx={{ width:'100vw', display: 'flex', alignItems: 'center' }}>
           <CoverImage>
