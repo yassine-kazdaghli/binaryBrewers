@@ -7,26 +7,19 @@ import DevelopersCard from "./components/carousel/developersCard";
 import PodcastPage from "./components/PodcastPage";
 import Projects from "./components/Projects";
 import Logo from "./components/nav/logo/logo";
+
+import InteractiveBackground from "./components/InterActiveBackground/interActiveBackground.jsx"
+
 import Particles from "react-particles";
 import LoginPageContent from "./components/LoginPage";
 
+
 function App() {
-  const particlesConfig = {
-    particles: {
-      number: {
-        value: 100,
-      },
-      size: {
-        value: 3,
-      },
-    },
-  };
+  
   return (
     <div>
-      <div className="interactive-background">
-        <Particles params={particlesConfig} />
-      </div>
-
+      
+      <InteractiveBackground />
       <Navigation />
       <Routes>
         <Route path="/" element={<Logo />} />
@@ -37,7 +30,13 @@ function App() {
         <Route path="/blog" element={<Projects />} />
       </Routes>
 
+      
+      <MusicPlayerSlider />
+    
+
+
      
+
     </div>
   );
 }
