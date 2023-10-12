@@ -11,6 +11,7 @@ import Logo from "./components/nav/logo/logo";
 import InteractiveBackground from "./components/InterActiveBackground/interActiveBackground.jsx";
 
 import LoginPageContent from "./components/LoginPage";
+import MusicPlayerSlider from "./components/mediaPlayer/mediaPlayer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<LoginPageContent />} />
         <Route path="/blog" element={<Projects />} />
       </Routes>
+      <MusicPlayerSlider/>
     </div>
   );
 }

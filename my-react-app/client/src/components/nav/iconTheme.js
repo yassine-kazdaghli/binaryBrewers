@@ -13,7 +13,7 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: 'whitesmoke',
+          backgroundColor: 'transparent',
           backdropFilter: 'blur(1px)',
           borderBottom: '1px solid black',
           height: 'max-content',

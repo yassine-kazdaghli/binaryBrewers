@@ -28,7 +28,7 @@ const InteractiveBackground = (props) => {
         interactivity: {
           events: {
             onClick: {
-              enable: true,
+              enable:true,
               mode: "push",
             },
             onHover: {
@@ -38,27 +38,31 @@ const InteractiveBackground = (props) => {
           },
           modes: {
             push: {
-              quantity: 5,
+              quantity: 100,
             },
             repulse: {
-              distance: 100,
+              distance: 5,
             },
           },
         },
         particles: {
+          
           links: {
-            enable: true,
-            distance: 200,
+            enable:false,
+            distance: 70,
           },
           move: {
             enable: true,
-            speed: { min: 1, max: 10 },
+            speed: { min: 1, max: 4 },
           },
           opacity: {
             value: { min: 0.3, max: 0.7 },
           },
+          shape: {
+            type: "circle"
+          },
           size: {
-            value: { min: 0.5, max: 3 },
+            value: { min: 0.5, max: 1.5 },
           },
         },
       }}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './login.css'
 import {
   MDBContainer,
   MDBTabs,
@@ -134,7 +135,7 @@ export default function Login() {
             </a>
           </div>
 
-          <MDBBtn className="mb-4 w-100" onClick={handleLogin}>
+          <MDBBtn className="mb-4 w-100" onClick={handleLogin} color="white">
             Sign in
           </MDBBtn>
           <p
@@ -159,7 +160,7 @@ export default function Login() {
             label="Full Name"
             id="form1-name"
             type="text"
-            color="whitesmoke"
+            color="white"
             value={fullName} // Bind the input value to the fullName state variable
             onChange={(e) => setFullName(e.target.value)} // Update the fullName state on change
           />
@@ -186,6 +187,7 @@ export default function Login() {
             type="password"
             value={password} // Bind the input value to the password state variable
             onChange={(e) => setPassword(e.target.value)} // Update the password state on change
+            style={{ borderColor: 'white' }}
           />
 
           <div className="d-flex justify-content-center mb-4">

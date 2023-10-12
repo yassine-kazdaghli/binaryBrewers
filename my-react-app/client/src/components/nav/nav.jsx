@@ -22,7 +22,7 @@ import { blue } from '@mui/material/colors';
 import { color } from '@mui/system';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Podcasts', 'Blog', 'contact', 'login'];
+const navItems = [ 'About', 'Podcasts', 'Blog', 'contact', 'login'];
 
 function Navigation(props) {
   const { window } = props;
@@ -43,7 +43,7 @@ function Navigation(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center',}}>
-              <Link to={`/${item.toLowerCase()}`} sx={{ textDecoration: 'none', color: 'orange' }}>
+              <Link to={`/${item.toLowerCase()}`} sx={{ textDecoration: 'none'}}>
                 <ListItemText primary={item} />
               </Link>
             </ListItemButton>
@@ -71,10 +71,15 @@ function Navigation(props) {
               >
                 <MenuIcon />
               </IconButton>
+              
+                
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                {/* Place your image here */}
+                <Link to={'/'}>{/* Place your image here */}
                 <img src={textBinaryBrewers} alt="Logo" style={{ height: '48px', marginRight: '16px' ,backgroundColor:'black', borderRadius:'10px',filter: 'invert(100%)'}} />
-              </div>
+             </Link> 
+             </div>
+              
+             
               <Typography
                 variant="h1"
                 component="div"
@@ -86,7 +91,7 @@ function Navigation(props) {
                 {navItems.map((item) => (
                   <Button
                     key={item}
-                    sx={{ color: 'black' }}
+                    sx={{ color: 'white' }}
                     onClick={() => navigate(`/${item.toLowerCase()}`)} // Use navigate to change routes
                   >
                     {item}
