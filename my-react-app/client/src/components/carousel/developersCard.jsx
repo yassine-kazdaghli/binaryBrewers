@@ -37,7 +37,7 @@ const DevelopersCard = () => {
       showArrows={true}
       showStatus={false}
       showIndicators={true}
-      showThumbs={true}
+      showThumbs={false}
       infiniteLoop={true}
       autoPlay={true}
       interval={2000}
@@ -55,15 +55,15 @@ const DevelopersCard = () => {
       {carouselData.map((item, index) => (
         <div key={index} className="Devs">
           <Card>
-            <Image src={item.imageUrl} ui={true} />
+            <Image src={item.imageUrl} ui={true} sx={{backgroundColor:'none'}} />
             <CardContent>
-              <Typography variant="h5" component="div">
+              <Typography variant="h5" component="div" color='secondary'>
                 {item.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="secondary">
                 {item.content}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="secondary">
                 {item.description} {/* Display Description */}
               </Typography>
             </CardContent>
