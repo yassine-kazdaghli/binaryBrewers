@@ -1,11 +1,11 @@
 import React from 'react';
 import "../logo/logo.css";
-import LogoWithText from "../logo/logoWithTextBinaryBrewers2.png"
+import movingImageLogo from "../logo/movingImageLogo.gif"
 
 const Logo = () => {
   return (
     <div className="logo">
-      <img src={LogoWithText} alt="logo" />
+      <img src={movingImageLogo} alt="logo" />
     </div>
   );
 };

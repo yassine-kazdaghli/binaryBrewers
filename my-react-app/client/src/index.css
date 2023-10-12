@@ -6,10 +6,10 @@
     /* You can also adjust other background properties as needed */
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    /* background-color: black; */
   }
 .cards{
-    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0); */
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
