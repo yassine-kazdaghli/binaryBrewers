@@ -38,7 +38,7 @@ const InteractiveBackground = (props) => {
           },
           modes: {
             push: {
-              quantity: 100,
+              quantity: 10,
             },
             repulse: {
               distance: 5,
