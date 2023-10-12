@@ -26,6 +26,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiTextField:{
+      styleOverrides:{
+        root:{
+          color: 'white'
+        }
+      }
+    }
   },
 });
 

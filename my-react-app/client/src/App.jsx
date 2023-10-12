@@ -7,6 +7,7 @@ import DevelopersCard from "./components/carousel/developersCard";
 import PodcastPage from "./components/PodcastPage";
 import Projects from "./components/Projects";
 import Logo from "./components/nav/logo/logo";
+import ContactPage from "./components/ContactPage";
 
 import InteractiveBackground from "./components/InterActiveBackground/interActiveBackground.jsx";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about" element={<DevelopersCard />} />
         <Route path="/login" element={<LoginPageContent />} />
         <Route path="/blog" element={<Projects />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <MusicPlayerSlider/>
     </div>
