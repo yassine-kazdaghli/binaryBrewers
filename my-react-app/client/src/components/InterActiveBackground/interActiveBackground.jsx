@@ -17,6 +17,7 @@ const InteractiveBackground = (props) => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
+        
         autoPlay: true,
         background: {
           color: "#111",
@@ -41,7 +42,7 @@ const InteractiveBackground = (props) => {
               quantity: 10,
             },
             repulse: {
-              distance: 5,
+              distance: 50,
             },
           },
         },
@@ -49,7 +50,7 @@ const InteractiveBackground = (props) => {
           
           links: {
             enable:false,
-            distance: 70,
+            distance: 7,
           },
           move: {
             enable: true,
@@ -62,7 +63,7 @@ const InteractiveBackground = (props) => {
             type: "circle"
           },
           size: {
-            value: { min: 0.5, max: 1.5 },
+            value: { min: 0.5, max: 15 },
           },
         },
       }}

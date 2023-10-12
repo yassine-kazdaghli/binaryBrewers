@@ -2,15 +2,23 @@
 .blog-post {
     border: 1px solid black;
     padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: whitesmoke;
+    background-color: #000000; /* Set the background color to black */
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+
   }
   
   .blog-post h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    border: 1px solid black;
+    border: 1px solid aliceblue;
+    border-radius: 0.1rem;
   }
   
   .blog-post p {
@@ -23,25 +31,20 @@
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #ccc;
+    margin: 0 auto;
   }
   
   .comment-form textarea {
-    width: 82vw;
+   
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin: 0 auto;
+    color: aliceblue;
   }
   
-  .comment-form button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+
   .comment {
     margin-bottom: 10px;
     padding: 10px;
@@ -59,29 +62,35 @@
   .main-container {
     height: 40vh;
     display: flex;
-    width: 75vw;
+    width: 100%;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    margin-top: -200px;
+    margin: 0 auto;
   }
   
   .comment-flexbox {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:fit-content;
+    gap: 2rem;
   }
   
   .comment-text {
-    margin: 12px 0;
     font-size: 1.15rem;
     font-weight: 600;
+    align-self: center;
+
   }
   
   .input-box {
     height: 75px;
-    width: 465px;
-    background-color: #ffffff;
+    background-color: aliceblue;
+    border: 1px solid #333;
+    padding: 5%;
+    
   }
 
 
@@ -110,8 +119,6 @@
   touch-action: manipulation;
   user-select: none;
   -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
 }
 
 .comment-button:focus {
