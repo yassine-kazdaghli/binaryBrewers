@@ -73,7 +73,7 @@ function Navigation(props) {
               </IconButton>
               
                 
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div  style={{ display: 'flex', alignItems: 'center' }}>
                 <Link to={'/'}>{/* Place your image here */}
                 <img src={textBinaryBrewers} alt="Logo" style={{ height: '48px', marginRight: '16px' ,backgroundColor:'black', borderRadius:'10px',filter: 'invert(100%)'}} />
              </Link> 

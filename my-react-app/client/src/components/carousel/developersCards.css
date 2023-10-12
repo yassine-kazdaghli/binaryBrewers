@@ -1,17 +1,19 @@
 
 .Devs{
 
-    height: 50vh;
-    margin: 0 auto ;
+   height: 100%;
+   margin: 0 auto;
     background-color: "transparent";
-    
-    padding: 6rem;
-    filter:hue-rotate(150);
+    width: 100%;
+    padding: 10%;
+   
     
 }
+:hover .Devs{
+    scale: 1.1;
+}
 .carousel{
-      width: 90vw;
-      
+      width: 60vw;
       box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
       margin: 0 auto;
      
