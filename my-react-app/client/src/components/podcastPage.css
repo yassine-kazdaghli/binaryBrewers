@@ -3,8 +3,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100vw;
-    height: 60vh;
+    height: 85vh;
     margin: 0 auto;
+    padding: 4rem;
 }

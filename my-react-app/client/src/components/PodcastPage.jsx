@@ -13,7 +13,7 @@ function PodcastPage() {
         showArrows={true}
         showStatus={false}
         showIndicators={true}
-        showThumbs={true}
+        showThumbs={false}
         infiniteLoop={true}
         autoPlay={true}
         interval={2000}
