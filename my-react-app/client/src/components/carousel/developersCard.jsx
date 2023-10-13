@@ -12,20 +12,17 @@ import Mads from "./images/Mads.jpg";
 const carouselData = [
   {
     title: "Yassine",
-    content: "This is the content for Card 1.",
-    description: "Matthew is a musician living in Nashville.", // Description for Card 1
+    description: "Besides being able to sell you sand in Sahara, and speaking more langauges than your abacus can count to, Yassine can build you websites that meet the highest industy standards. You are welcome!", // Description for Card 1
     imageUrl: Yassine, // Replace with your image URL
   },
   {
     title: "Riccardo",
-    content: "This is the content for Card 2.",
-    description: "John is an artist based in New York City.", // Description for Card 2
+    description: "", // Description for Card 2
     imageUrl: Ricci, // Replace with your image URL
   },
   {
     title: "Mads",
-    content: "This is the content for Card 3.",
-    description: "Sarah is a writer and editor in San Francisco.", // Description for Card 3
+    description: "Art-school drop-out and hobby Psych-Rock musician Mads, has a DIY approach to Web-Development and life. He will make sure your website stands out!", // Description for Card 3
     imageUrl: Mads, // Replace with your image URL
   },
 ];
