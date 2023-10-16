@@ -1,9 +1,52 @@
 import React, { useState } from "react";
+import axios from "axios";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import SendIcon from "@mui/icons-material/Send";
-import { ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ffffff',
+    },
+  },
+  overrides: {
+    MuiInputLabel: {
+      root: {
+        color: "white", // Label color
+        "&$focused": {
+          color: "white" // Label color when focused
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      root: {
+        "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
+          borderColor: "white" // Border color on hover
+        },
+        "&$focused $notchedOutline": {
+          borderColor: "white" // Border color when focused
+        }
+      },
+      input: {
+        color: "white", // Input text color
+        "&::placeholder": {
+          color: "white", // Placeholder color
+          opacity: 1 // This is important to make sure the placeholder appears as expected
+        }
+      },
+      notchedOutline: {
+        borderColor: "white" // Default border color
+      }
+    }
+  }
+});
+
+
+
+
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -12,6 +55,9 @@ function ContactForm() {
     message: "",
   });
 
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,63 +65,94 @@ function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here (e.g., send data to server)
-    console.log(formData);
+    setSubmitSuccess(false);
+    setSubmitError(false);
+
+    try {
+      const response = await axios.post("http://localhost:5002/api/contact", formData);
+
+      if (response.status === 201) {
+        console.log("Form submitted successfully:", response.data);
+        setSubmitSuccess(true);
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        console.error("Failed to submit form:", response.data);
+        setSubmitError(true);
+      }
+    } catch (error) {
+      console.error("There was an error submitting the form:", error);
+      setSubmitError(true);
+    }
   };
 
   return (
-    <>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
+    <ThemeProvider theme={theme}>
+      <Container maxWidth="sm">
+        <h1>Contact Us</h1>
+
+        {submitSuccess && <p>Thank you! Your message has been sent.</p>}
+        {submitError && <p>Oops! There was an error submitting your message. Please try again later.</p>}
+
+        <form onSubmit={handleSubmit}>
         <TextField
-          
-          label="Name"
-          variant="outlined"
-          fullWidth
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          margin="normal"
-        />
-        <TextField
-         
-          label="Email"
-          color="secondary"
-          variant="outlined"
-          fullWidth
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          margin="normal"
-        />
-        <TextField
-          
-          label="Message"
-          variant="outlined"
-          fullWidth
-          multiline
-          rows={4}
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          margin="normal"
-          
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          color="warning"
-          fullWidth
-          startIcon={<SendIcon />}
-          // sx={{ color: 'black' }}
-        >
-          Submit
-        </Button>
-      </form>
-    </>
+  label="Name"
+  
+  variant="outlined"
+  fullWidth
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  margin="normal"
+  InputProps={{ placeholder: 'Enter your name' }} // Example placeholder
+/>
+
+<TextField
+  label="Email"
+  
+  variant="outlined"
+  fullWidth
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  margin="normal"
+  InputProps={{ placeholder: 'Enter your email' }} // Example placeholder
+/>
+
+<TextField
+  label="Message"
+  color="primary"
+  variant="outlined"
+  fullWidth
+  multiline
+  rows={4}
+  name="message"
+  value={formData.message}
+  onChange={handleChange}
+  margin="normal"
+  InputProps={{ placeholder: 'Enter your message' }} // Example placeholder
+/>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+            startIcon={<SendIcon />}
+          >
+            Submit
+          </Button>
+        </form>
+      </Container>
+    </ThemeProvider>
   );
 }
 
 export default ContactForm;
+
+

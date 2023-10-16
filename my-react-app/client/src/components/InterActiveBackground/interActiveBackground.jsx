@@ -48,25 +48,26 @@ const InteractiveBackground = (props) => {
           },
           modes: {
             push: {
-              quantity: 10,
+              quantity: 100,
               size:150,
             },
             bubble: {
-              distance: 250,
+              distance: 650,
               duration: 22,
               opacity: 0,
-              size: 0,
+              size: 0.5,
             },
           },
         },
         particles: {
           color: {
-            value: "#009B9B",
-            animation: {
-              enable: true,
-              speed: 20,
-              sync: true
-            }
+            value: ["#111","#ffffff","009b9b"]
+          // 
+           // animation: {
+             // enable: true,
+            //  speed: 20,
+              //sync: true
+            //}
           },
           lineLinked: {
             color: "#ffffff",
@@ -114,7 +115,7 @@ const InteractiveBackground = (props) => {
               font: "Verdana",
               style: "",
               value: "*",
-              weight: "600",
+              weight: "800",
             },
             polygon: {
               nb_sides: 5,

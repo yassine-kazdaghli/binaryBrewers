@@ -6,6 +6,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
 import { errorHandler } from './middlewares/errorMiddleware.js'
+import contactRoutes from './routes/contactRoutes.js';
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(cors({
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/contact', contactRoutes);
 
 // Error handler middleware
 app.use(errorHandler);
