@@ -37,10 +37,7 @@ const InteractiveBackground = (props) => {
         },
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
+           
             onHover: {
               enable: true,
               mode: "bubble",
