@@ -17,6 +17,7 @@ const theme = createTheme({
     MuiInputLabel: {
       root: {
         color: "white", // Label color
+        
         "&$focused": {
           color: "white" // Label color when focused
         }
@@ -104,7 +105,7 @@ function ContactForm() {
         <form onSubmit={handleSubmit}>
         <TextField
   label="Name"
-  
+  style={{backgroundColor:"white", borderRadius:"5px"}}
   variant="outlined"
   fullWidth
   name="name"
@@ -116,7 +117,7 @@ function ContactForm() {
 
 <TextField
   label="Email"
-  
+  style={{backgroundColor:"white", borderRadius:"5px"}}
   variant="outlined"
   fullWidth
   name="email"
@@ -137,14 +138,17 @@ function ContactForm() {
   value={formData.message}
   onChange={handleChange}
   margin="normal"
+  style={{backgroundColor:"white" , borderRadius:"5px"}}
   InputProps={{ placeholder: 'Enter your message' }} // Example placeholder
 />
           <Button
+          style={{backgroundColor:"white" , borderRadius:"5px"}}
             type="submit"
             variant="contained"
             color="primary"
             fullWidth
             startIcon={<SendIcon />}
+
           >
             Submit
           </Button>

@@ -81,6 +81,7 @@ export default function Login() {
       >
         <MDBTabsItem>
           <MDBTabsLink
+          style={{backgroundColor:"white",fontSize:"1.05rem"}}
             onClick={() => handleJustifyClick("tab1")}
             active={justifyActive === "tab1"}
           >
@@ -105,15 +106,17 @@ export default function Login() {
           </div>
 
           <MDBInput
+          
             wrapperClass="mb-4"
             label="Email address"
             id="form1"
             type="email"
-            style={{ color: "white", fontSize: "1.1rem" }}
+            style={{ color: "white", fontSize: "1.1rem" ,backgroundColor:"white" }}
             value={username} // Bind the input value to the username state variable
             onChange={(e) => setUsername(e.target.value)} // Update the username state on change
           />
           <MDBInput
+            style={{backgroundColor:"white"}}
             wrapperClass="mb-4"
             label="Password"
             id="form2"
@@ -156,6 +159,7 @@ export default function Login() {
           </div>
 
           <MDBInput
+          style={{backgroundColor:"white"}}
             wrapperClass="mb-4"
             label="Full Name"
             id="form1-name"
@@ -165,6 +169,7 @@ export default function Login() {
             onChange={(e) => setFullName(e.target.value)} // Update the fullName state on change
           />
           <MDBInput
+          style={{backgroundColor:"white"}}
             wrapperClass="mb-4"
             label="Username"
             id="form1-username"
@@ -173,6 +178,7 @@ export default function Login() {
             onChange={(e) => setUsername(e.target.value)} // Update the username state on change
           />
           <MDBInput
+          style={{backgroundColor:"white"}}
             wrapperClass="mb-4"
             label="Email"
             id="form1-email"
@@ -181,13 +187,14 @@ export default function Login() {
             onChange={(e) => setEmail(e.target.value)} // Update the email state on change
           />
           <MDBInput
+          style={{backgroundColor:"white"}}
             wrapperClass="mb-4"
             label="Password"
             id="form1-password"
             type="password"
             value={password} // Bind the input value to the password state variable
             onChange={(e) => setPassword(e.target.value)} // Update the password state on change
-            style={{ borderColor: 'white' }}
+            
           />
 
           <div className="d-flex justify-content-center mb-4">

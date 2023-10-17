@@ -19,12 +19,12 @@ const mockFetchSongsFromCloudinary = async () => {
       artist: "W.A Mozart",
       url: "https://res.cloudinary.com/dl1qfqyaw/video/upload/v1697450484/W.A_Mozart_-_Ein_Musikalischer_Spass_-_II._Menuetto_and_Trio_gjvpnc.mp3",
     },
-    // {
-    //     title: "Moonlight Sonata Op. 27 No. 2 - III. Presto",
-    //     artist: "Paul Pitman",
-    //     url:"https://files.musopen.org/recordings/4f63c71d-fd57-4665-998b-1005891b439e.mp3?filename=Paul+Pitman+-+Moonlight+Sonata+Op.+27+No.+2+-+III.+Presto.mp3&preview"
-    // },
-    // // You can add more songs to test the next/previous functionality...
+     {
+         title: "Moonlight Sonata Op. 27 No. 2 - III. Presto",
+         artist: "Paul Pitman",
+         url:"https://files.musopen.org/recordings/4f63c71d-fd57-4665-998b-1005891b439e.mp3?filename=Paul+Pitman+-+Moonlight+Sonata+Op.+27+No.+2+-+III.+Presto.mp3&preview"
+     },
+    // You can add more songs to test the next/previous functionality...
   ];
 };
 
@@ -100,30 +100,31 @@ export default function MusicPlayer() {
 
       {/* Playback controls */}
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <IconButton onClick={handlePreviousSong} color="primary">
+        <IconButton onClick={handlePreviousSong} style={{color:"white"}}>
           <SkipPreviousRounded />
         </IconButton>
-        <IconButton onClick={handleRewind} color="primary">
+        <IconButton onClick={handleRewind} style={{color:"white"}}>
           <FastRewindRounded />
         </IconButton>
-        <IconButton onClick={handlePlayPause} color="primary">
+        <IconButton onClick={handlePlayPause} style={{color:"white"}}>
           {paused ? <PlayArrowRounded /> : <PauseRounded />}
         </IconButton>
-        <IconButton onClick={handleFastForward} color="primary">
+        <IconButton onClick={handleFastForward} style={{color:"white"}}>
           <FastForwardRounded />
         </IconButton>
-        <IconButton onClick={handleNextSong} color="primary">
+        <IconButton onClick={handleNextSong} style={{color:"white"}}>
           <SkipNextRounded />
         </IconButton>
       </Box>
 
       {/* Volume control */}
-      <Box sx={{ display: "flex", alignItems: "center", width: "25%" }}>
+      <Box sx={{ display: "flex", alignItems: "center", width: "25%",marginRight:"2rem" }}>
         <VolumeDownRounded sx={{ color: "white" }} />
         <Slider
+        style={{color:"tomato", width:"15%"}}
           value={volume * 100}
           onChange={handleVolumeChange}
-          sx={{ mx: 2, color: "primary" }}
+          sx={{ mx: 2, color:"secondary"  }}
         />
         <VolumeUpRounded sx={{ color: "white" }} />
       </Box>
