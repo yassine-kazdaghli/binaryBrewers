@@ -6,10 +6,11 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  
 
 }
 h1{
-  font-size: 4rem;
+  font-size: 2rem;
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

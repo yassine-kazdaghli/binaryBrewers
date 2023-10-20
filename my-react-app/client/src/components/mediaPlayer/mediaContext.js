@@ -5,12 +5,13 @@ export const MyContext = createContext();
 
 const MediaProvider = ({ children }) => {
   const [songs, setSongs] = useState([]);
+  const [currentSong,setcurrentSong] = useState("")
 
 
   console.log(songs);
 
   return (
-    <MyContext.Provider value={{ songs, setSongs  }}>
+    <MyContext.Provider value={{ songs, setSongs ,currentSong,setcurrentSong }}>
       {children}
     </MyContext.Provider>
   );

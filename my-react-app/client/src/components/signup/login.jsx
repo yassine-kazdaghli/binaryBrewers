@@ -22,6 +22,9 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState(""); // Changed variable name to match the state variable
   const [email, setEmail] = useState("");
+  const [registerUsername, setRegisterUsername] = useState("");
+  const [loginUsername, setLoginUsername] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
 
   const navigate = useNavigate(); // Get the navigate function
 
@@ -36,10 +39,10 @@ export default function Login() {
   const handleSignup = async () => {
     
     try {
-      console.log('Signup data:', username, password, fullName, email);
+      console.log('Signup data:', registerUsername, password, fullName, email);
       // Create a signupData object with user's sign-up data
       const response = await authService.signup(
-        username,
+        registerUsername,
         password,
         fullName,
         email
@@ -49,7 +52,7 @@ export default function Login() {
       if (response.message === "User registered successfully") {
         // Automatically log in the user after sign-up
         await handleLogin();
-      }
+      }navigate("/");
     } catch (error) {
       console.error(error);
       // Handle sign-up error here
@@ -59,7 +62,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       // Call the login function from your authService
-      const response = await authService.login(username, password);
+      const response = await authService.login(loginUsername, loginPassword);
       const token = response.token;
 
       // Store the JWT token in a cookie with a 1-hour expiration
@@ -81,7 +84,7 @@ export default function Login() {
       >
         <MDBTabsItem>
           <MDBTabsLink
-          style={{backgroundColor:"white",fontSize:"1.05rem"}}
+          style={{backgroundColor:"tomato",fontSize:"1.05rem"}}
             onClick={() => handleJustifyClick("tab1")}
             active={justifyActive === "tab1"}
           >
@@ -108,21 +111,21 @@ export default function Login() {
           <MDBInput
           
             wrapperClass="mb-4"
-            label="Email address"
-            id="form1"
-            type="email"
-            style={{ color: "white", fontSize: "1.1rem" ,backgroundColor:"white" }}
-            value={username} // Bind the input value to the username state variable
-            onChange={(e) => setUsername(e.target.value)} // Update the username state on change
+            label="Username"
+            id="loginUsername"
+            type="text"
+            style={{ color: "black", fontSize: "1.1rem" ,backgroundColor:"white" }}
+            value={loginUsername} // Bind the input value to the username state variable
+            onChange={(e) => setLoginUsername(e.target.value)} // Update the username state on change
           />
           <MDBInput
             style={{backgroundColor:"white"}}
             wrapperClass="mb-4"
             label="Password"
-            id="form2"
+            id="loginPassword"
             type="password"
-            value={password} // Bind the input value to the password state variable
-            onChange={(e) => setPassword(e.target.value)} // Update the password state on change
+            value={loginPassword} // Bind the input value to the password state variable
+            onChange={(e) => setLoginPassword(e.target.value)} // Update the password state on change
           />
 
           <div className="d-flex justify-content-between mx-4 mb-4">
@@ -172,10 +175,10 @@ export default function Login() {
           style={{backgroundColor:"white"}}
             wrapperClass="mb-4"
             label="Username"
-            id="form1-username"
+            id="register-username"
             type="text"
-            value={username} // Bind the input value to the username state variable
-            onChange={(e) => setUsername(e.target.value)} // Update the username state on change
+            value={registerUsername}// Bind the input value to the username state variable
+            onChange={(e) => setRegisterUsername(e.target.value)} // Update the username state on change
           />
           <MDBInput
           style={{backgroundColor:"white"}}

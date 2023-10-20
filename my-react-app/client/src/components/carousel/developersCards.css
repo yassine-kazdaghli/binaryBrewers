@@ -1,21 +1,37 @@
-
-.Devs{
-
-   height: 100%;
-   margin: 0 auto;
-    background-color: "transparent";
-    width: 100%;
-    padding: 10%;
-   
-    
+/* Global Styles for Modern Font */
+body {
+    font-family: 'Poppins', sans-serif;
 }
-:hover .Devs{
-    scale: 1.1;
+
+/* Styling for the Developer Cards */
+.Devs {
+    height: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 1rem;
+    max-width: 200%;
+    transition: transform 0.3s ease;
 }
-.carousel{
-      width: 30vw;
-      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
-      margin: 0 auto;
-     
-    
+
+.Devs:hover {
+    transform: scale(1.05);
+}
+
+/* Carousel Styling */
+.carousel {
+    width: 60vw;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;  /* Ensure no child elements overflow the rounded corners */
+}
+
+/* Image Styling */
+.Devs img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.Devs img:hover {
+    transform: scale(1.03);
 }
