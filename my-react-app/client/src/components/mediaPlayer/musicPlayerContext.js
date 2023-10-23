@@ -5,31 +5,23 @@ export const MusicPlayerContext = createContext();
 export function MusicPlayerProvider({ children }) {
   const [paused, setPaused] = useState(true);
   const [volume, setVolume] = useState(1);
-  const [songs, setSongs] = useState(podcastsData); // You can populate this with your song data
+  const [songs] = useState(podcastsData); // You can populate this with your song data
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const audioRef = useRef(null);
 
   
 
-const playPrevious = () => {
-    if (currentIndex - 1 >= 0) {
-        setCurrentIndex(currentIndex - 1);
-    } else {
-        setCurrentIndex(songs.length - 1); // Optional: loop to the last song if you're at the start
-    }
-};
+  const playPrevious = () => {
+    setCurrentIndex(prev => (prev - 1 + songs.length) % songs.length);
+  };
 
-const playNext = () => {
-    if (currentIndex + 1 < songs.length) {
-        setCurrentIndex(currentIndex + 1);
-    } else {
-        setCurrentIndex(0); // Optional: loop back to the first song if you're at the end
-    }
-};
-
+  const playNext = () => {
+    setCurrentIndex(prev => (prev + 1) % songs.length);
+  };
 
   const handlePlayPause = () => {
+    console.log('current song:', songs)
     if (paused && audioRef.current) {
       audioRef.current.play();
     } else {
@@ -49,14 +41,18 @@ const playNext = () => {
   const handleNextSong = () => {
     const nextIndex = (currentIndex + 1) % songs.length;
     setCurrentIndex(nextIndex);
-    audioRef.current.play();
-  };
+    if (audioRef.current) {
+        audioRef.current.play();
+    }
+};
 
-  const handlePreviousSong = () => {
+const handlePreviousSong = () => {
     const prevIndex = (currentIndex - 1 + songs.length) % songs.length;
     setCurrentIndex(prevIndex);
-  };
-
+    if (audioRef.current) {
+        audioRef.current.play();
+    }
+};
   const handleVolumeChange = (event, newValue) => {
     const volumeValue = newValue / 100;
     if (audioRef.current) {
@@ -64,6 +60,7 @@ const playNext = () => {
     }
     setVolume(volumeValue);
   };
+  
 
   return (
     <MusicPlayerContext.Provider value={{

@@ -8,7 +8,7 @@ import SkipNextRounded from "@mui/icons-material/SkipNextRounded";
 import SkipPreviousRounded from "@mui/icons-material/SkipPreviousRounded";
 import VolumeUpRounded from "@mui/icons-material/VolumeUpRounded";
 import VolumeDownRounded from "@mui/icons-material/VolumeDownRounded";
-import { useMusicPlayer } from "./musicPlayerContext";
+
 import ThemeContext from "../../ThemeContext";
 import { MusicPlayerContext } from "./musicPlayerContext";
 
@@ -25,6 +25,7 @@ export default function MusicPlayer() {
     handleNextSong,
     handlePreviousSong,
     audioRef,
+    
   } = useContext(MusicPlayerContext);
 
   const { currentTheme } = useContext(ThemeContext);
@@ -83,11 +84,12 @@ export default function MusicPlayer() {
       </Box>
 
       <audio
-        ref={audioRef}
-        src={songs[currentIndex]?.url}
-        onEnded={handleNextSong}
-        preload="auto"
-      />
+    ref={audioRef}
+    src={songs[currentIndex]?.url}
+    onEnded={handleNextSong}
+    preload="auto"
+    
+/>
     </Box>
   );
 }
