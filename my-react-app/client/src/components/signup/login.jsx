@@ -84,7 +84,7 @@ export default function Login() {
       >
         <MDBTabsItem>
           <MDBTabsLink
-          style={{backgroundColor:"tomato",fontSize:"1.05rem"}}
+          style={{backgroundColor:"white",fontSize:"1.05rem"}}
             onClick={() => handleJustifyClick("tab1")}
             active={justifyActive === "tab1"}
           >
@@ -136,9 +136,7 @@ export default function Login() {
               label="Remember me"
               color="white"
             />
-            <a href="!#" style={{ color: "white", fontSize: "1.1rem" }}>
-              Forgot password?
-            </a>
+          
           </div>
 
           <MDBBtn className="mb-4 w-100" onClick={handleLogin} color="white">

@@ -102,6 +102,7 @@ function Navigation(props) {
                   backgroundColor: "black",
                   borderRadius: "5px",
                   filter: "invert(100%)",
+                  
                 }}
               />
             </Link>

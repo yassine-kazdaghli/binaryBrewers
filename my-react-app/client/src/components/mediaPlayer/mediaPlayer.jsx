@@ -9,7 +9,7 @@ import SkipPreviousRounded from "@mui/icons-material/SkipPreviousRounded";
 import VolumeUpRounded from "@mui/icons-material/VolumeUpRounded";
 import VolumeDownRounded from "@mui/icons-material/VolumeDownRounded";
 
-import ThemeContext from "../../ThemeContext";
+
 import { MusicPlayerContext } from "./musicPlayerContext";
 
 export default function MusicPlayer() {
@@ -25,10 +25,10 @@ export default function MusicPlayer() {
     handleNextSong,
     handlePreviousSong,
     audioRef,
-    
   } = useContext(MusicPlayerContext);
 
-  const { currentTheme } = useContext(ThemeContext);
+  
+
   return (
     <Box
       sx={{
@@ -36,19 +36,19 @@ export default function MusicPlayer() {
         bottom: 0,
         left: 0,
         right: 0,
-        backgroundColor:
-          currentTheme === "dark" ? "rgba(0,0,0,0.8)" : "rgba(255,255,255,0.8)",
+        
         display: "flex",
+        flexDirection: { xs: "column", sm: "row" },
         alignItems: "center",
         justifyContent: "space-between",
         padding: "10px",
       }}
     >
-      <Typography variant="h6" color="white">
+      <Typography variant="h6" color="white" sx={{ textAlign: "center", marginBottom: { xs: "1rem", sm: "0" } }}>
         {songs[currentIndex]?.title} - {songs[currentIndex]?.artist}
       </Typography>
 
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ display: "flex", alignItems: "center", marginBottom: { xs: "1rem", sm: "0" } }}>
         <IconButton onClick={handlePreviousSong} style={{ color: "white" }}>
           <SkipPreviousRounded />
         </IconButton>
@@ -70,26 +70,20 @@ export default function MusicPlayer() {
         sx={{
           display: "flex",
           alignItems: "center",
-          width: "25%",
-          marginRight: "2rem",
+          width: { xs: "100%", sm: "25%" },
+          marginRight: { xs: "0", sm: "2rem" },
         }}
       >
         <VolumeDownRounded sx={{ color: "white" }} />
         <Slider
           value={volume * 100}
           onChange={handleVolumeChange}
-          sx={{ mx: 2, width: "15%", color: "tomato" }}
+          sx={{ mx: 2, width: { xs: "80%", sm: "15%" }, color: "tomato" }}
         />
         <VolumeUpRounded sx={{ color: "white" }} />
       </Box>
 
-      <audio
-    ref={audioRef}
-    src={songs[currentIndex]?.url}
-    onEnded={handleNextSong}
-    preload="auto"
-    
-/>
+      <audio ref={audioRef} src={songs[currentIndex]?.url} onEnded={handleNextSong} preload="auto"/>
     </Box>
   );
 }

@@ -5,7 +5,9 @@ import CommentList from './CommentList'; // You need to import CommentList here
 import './Styles/BlogPost.css';
 import { useAuth } from '../../AuthContext';
 
+
 const BlogPost = ({ post }) => {
+
   const [comments, setComments] = useState(post.comments || []);
   const { currentUser } = useAuth();
   const addComment = (newComment) => {
@@ -17,6 +19,7 @@ const BlogPost = ({ post }) => {
   };
 
   return (
+    
     <div className="blog-post">
       <h2>{post.title}</h2>
       <p>{post.content}</p>
@@ -25,6 +28,7 @@ const BlogPost = ({ post }) => {
       <CommentForm addComment={addComment} />
       {currentUser ? <CommentForm addComment={addComment} /> : <p>Please login to comment.</p>}
     </div>
+   
   );
 };
 
