@@ -1,37 +1,68 @@
-/* Global Styles for Modern Font */
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
 }
 
-/* Styling for the Developer Cards */
 .Devs {
-    height: 100%;
-    margin: 0 auto;
-    background-color: transparent;
+    color: white;
     padding: 1rem;
-    max-width: 200%;
+    flex: 1; /* This will make each card take equal space */
     transition: transform 0.3s ease;
+    background: black;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 0 10px; /* Spacing between the cards */
 }
 
 .Devs:hover {
     transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Carousel Styling */
 .carousel {
-    width: 60vw;
-    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+    height: 450px;
+    width: 90vw;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     margin: 2rem auto;
     border-radius: 10px;
-    overflow: hidden;  /* Ensure no child elements overflow the rounded corners */
+    overflow: hidden;
 }
 
-/* Image Styling */
+.carousel .carousel-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .Devs img {
     border-radius: 10px;
     transition: transform 0.3s ease;
+    width: auto;
+    max-height: 140px;
 }
 
-.Devs img:hover {
-    transform: scale(1.03);
+.iconContainer {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 24px;
+    color: #777;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+    color: #0077b6;
+    transform: scale(1.2);
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    .carousel {
+        width: 100vw;
+    }
 }
