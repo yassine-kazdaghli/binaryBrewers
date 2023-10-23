@@ -9,6 +9,7 @@ import Yassine from "./images/Yassine.jpg";
 import Ricci from "./images/Ricci.png";
 import Mads from "./images/Mads.jpg";
 
+
 const carouselData = [
   {
     title: "Yassine",

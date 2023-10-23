@@ -20,3 +20,14 @@
 .login{
     position: relative;
 }
+body.light {
+    background-color: #ffffff;
+    color: #333333;
+    /* other light-theme styling */
+}
+
+body.dark {
+    background-color: #333333;
+    color: #ffffff;
+    /* other dark-theme styling */
+}

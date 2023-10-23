@@ -1,29 +1,32 @@
-// CommentForm.js
 import React, { useState } from "react";
-import './Styles/BlogPost.css';
+import "./Styles/BlogPost.css";
+import { useAuth } from "../../AuthContext";
 
 function CommentForm({ addComment }) {
   const [comment, setComment] = useState("");
+  const { currentUser } = useAuth();
 
   const onClickHandler = () => {
     if (comment.trim() !== "") {
-      addComment({ text: comment, id: Date.now() }); // Create a comment object with a unique ID
-      setComment(""); // Clear the input field after submission
+      addComment({
+        text: comment,
+        username: currentUser ? currentUser.username : "Anonymous",
+        timestamp: new Date().toISOString(),
+        id: Date.now()
+      });
+      setComment("");
     }
-  };
-
-  const onChangeHandler = (e) => {
-    setComment(e.target.value);
   };
 
   return (
     <div className="main-container">
       <div className="comment-flexbox">
-        <h3 className="comment-text">Comment</h3>
         <textarea
           value={comment}
-          onChange={onChangeHandler}
+          onChange={(e) => setComment(e.target.value)}
           className="input-box"
+          placeholder="comment here ..."
+          style={{ padding: "1rem" }}
         />
         <button onClick={onClickHandler} className="comment-button">
           Submit
@@ -34,4 +37,3 @@ function CommentForm({ addComment }) {
 }
 
 export default CommentForm;
-
