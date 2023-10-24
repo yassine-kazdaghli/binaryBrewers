@@ -56,7 +56,7 @@ const InteractiveBackground = (props) => {
         },
         particles: {
           color: {
-            value: ["#111","#ffffff","009b9b"]
+            value: ["#EDE1D5","#ffffff","#000000"]
           // 
            // animation: {
              // enable: true,
@@ -79,11 +79,11 @@ const InteractiveBackground = (props) => {
                 y: 600,
               },
             },
-            bounce: false,
+            bounce: true,
             direction: "none",
             enable: true,
             outMode: "out",
-            random: false,
+            random: true,
             speed: 0.3,
             straight: false,
           },
