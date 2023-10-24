@@ -19,7 +19,7 @@ const BlogPost = ({ post }) => {
   };
 
   return (
-    
+    <div className= "blog">
     <div className="blog-post">
       <h2>{post.title}</h2>
       <p>{post.content}</p>
@@ -27,6 +27,7 @@ const BlogPost = ({ post }) => {
       <CommentList comments={comments} /> {/* Render the list of comments */}
       <CommentForm addComment={addComment} />
       {currentUser ? <CommentForm addComment={addComment} /> : <p>Please login to comment.</p>}
+    </div>
     </div>
    
   );

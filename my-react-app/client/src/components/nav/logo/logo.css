@@ -11,14 +11,18 @@
 
 }
 h1{
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #EDE1D5;
   font-family: "Press Start 2P";
+  justify-content: center;
+  align-items: center;
 }
 .intro{
   font-family: "Press Start 2P";
   color: white;
-  width:80vw;
+  width:30vw;
+  justify-content: center;
+ 
 }
 .logo img {
   max-width: max-content;
