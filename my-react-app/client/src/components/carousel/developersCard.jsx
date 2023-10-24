@@ -70,22 +70,20 @@ const DevelopersCard = () => {
         <div key={index} className="Devs" style={{backgroundColor: 'black'}}>
           <Grid columns={3} stackable>
             <Grid.Column>
-              <Card fluid>
+              <Card >
                 {" "}
                 {/* Use "fluid" to make the card responsive */}
                 <Image
                   src={item.imageUrl}
                   ui={true}
-                  sx={{ backgroundColor: "none" }}
+                  sx={{ backgroundColor: "white" }}
                 />
-                <CardContent>
-                  <Typography variant="h5" component="div" style={{color:'white'}}>
+                <CardContent sx={{ backgroundColor: "white" }}>
+                  <Typography variant="h5" component="div">
                     {item.title}
                   </Typography>
-                  <Typography variant="body2" style={{color:'white'}}>
-                    {item.content}
-                  </Typography>
-                  <Typography variant="body2" style={{color:'white'}}>
+                  
+                  <Typography variant="body2" >
                     {item.description}
                   </Typography>
                   <div className="iconContainer">

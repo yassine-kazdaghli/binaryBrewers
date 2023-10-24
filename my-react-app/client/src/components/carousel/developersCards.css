@@ -6,26 +6,28 @@ body {
 /* Styling for the Developer Cards */
 .Devs {
     height: 100%;
-    margin: 0 auto;
-    background-color: transparent;
+    color: black;
     padding: 1rem;
     width: max-content;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
 }
 
 .Devs:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* Carousel Styling */
 .carousel {
     
-    background-color: whitesmoke;
+    background-color: transparent;
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;  /* Ensure no child elements overflow the rounded corners */
-    width: 40vw;
+    width: 80%;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
 /* Image Styling */
@@ -36,6 +38,9 @@ body {
 
 .Devs img:hover {
     transform: scale(1.03);
+}
+.Devs p{
+    color:black;
 }
 .iconContainer {
   display: flex;
@@ -56,12 +61,12 @@ body {
 }
 .about-us-description {
     padding: 20px;
-    background-color: whitesmoke;
+   background-color: transparent;
     margin: 20px auto;
     border-radius: 10px;
     max-width: 90%;
     text-align: center;
-    color: black;
+    color: whitesmoke;
 }
 
 .about-us-description h2 {
