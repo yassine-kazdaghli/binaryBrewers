@@ -59,7 +59,7 @@ const DevelopersCard = () => {
       stopOnHover={true}
       emulateTouch={true}
       swipeable={true}
-      centerSlidePercentage={100}
+      centerSlidePercentage={55}
       centerMode={true}
       dynamicHeight={false}
       width="auto"
