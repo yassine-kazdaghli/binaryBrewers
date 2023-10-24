@@ -22,15 +22,13 @@ const InteractiveBackground = (props) => {
 
   return (
     <Particles
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={{
-        background: {
-          color: {
-            value: "#111",
-          },
-        },
+    id="tsparticles"
+    init={particlesInit}
+    loaded={particlesLoaded}
+    options={{
+      background: {
+        color: props.currentTheme === "light" ? "#fff" : "#111",
+      },
         fullScreen: {
           enable: true,
           zIndex: -10,

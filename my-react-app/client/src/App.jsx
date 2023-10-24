@@ -13,7 +13,7 @@ import {
   ThemeProvider as MUIThemeProvider,
   createTheme,
 } from "@mui/material/styles";
-import InteractiveBackground from "./components/InterActiveBackground/interActiveBackground.jsx";
+import InteractiveBackground from "./components/InterActiveBackground/interActiveBackground";
 import LoginPageContent from "./components/LoginPage";
 import MusicPlayerSlider from "./components/mediaPlayer/mediaPlayer";
 import { AuthProvider } from "./AuthContext";
@@ -38,7 +38,7 @@ function App() {
           {/* Wrap your main component tree with AuthProvider */}
           <MusicPlayerProvider>
             <div>
-              <InteractiveBackground />
+            <InteractiveBackground currentTheme={currentTheme} toggleTheme={toggleTheme} />
               <Navigation />
               <Routes>
                 <Route path="/" element={<Logo />} />
