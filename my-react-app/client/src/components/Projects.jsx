@@ -1,14 +1,10 @@
-// Projects.js
-import React from 'react';
-
-import BlogPostList from './Blog/BlogPostList';
-
+import BlogPostList from '../components/Blog/BlogPostList';  // adjust the path accordingly
 
 function Projects() {
-  return <div>
-    <BlogPostList/>
-    
-  </div>;
+  return (
+    <div>
+      <BlogPostList />
+    </div>
+  );
 }
-
 export default Projects;

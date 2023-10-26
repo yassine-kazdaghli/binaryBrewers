@@ -1,12 +1,33 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+import api from './services/api.js';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState("");
+    const [token, setToken] = useState(null);
+
+   
+
+    useEffect(() => {
+         
+            api.get('/api/users/current_user',{withCredentials:true})
+                .then(response => {
+                    setCurrentUser(response.data);
+                    
+                })
+                .catch(error => {
+                    console.error("Error fetching user details:", error);
+                    setToken(null);
+                    Cookies.remove('token');
+                });
+        
+    }, []);
 
     return (
-        <AuthContext.Provider value={{ currentUser, setCurrentUser }}>
+        <AuthContext.Provider value={{ currentUser, setCurrentUser, token, setToken }}>
             {children}
         </AuthContext.Provider>
     );

@@ -1,44 +1,36 @@
-/* Reset & Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /* Blog Post Styles */
 .blog-post {
   border-bottom: 1px solid black;
   padding: 20px;
   margin: 20px;
-  background-color: transparent;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-
 .blog-post h2 {
   font-size: 24px;
   margin-bottom: 10px;
   border-bottom: 1px solid black;
-  color:white;
+  color: #000;
 }
-
 .blog-post p {
   font-size: 1.1rem;
   line-height: 1.5;
-  color:white;
-  
+  color:#000
 }
-
 /* Comments Section */
 .comment-list {
   margin-top: 20px;
   padding-top: 20px;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
-  
   margin-bottom: 5rem;
 }
-
 .comment-form textarea {
   margin-top: 2rem;
   width: 100%;
@@ -47,7 +39,6 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 .comment {
   margin-bottom: 10px;
   padding: 10px;
@@ -57,7 +48,6 @@
   justify-content: center;
   align-items: center;
 }
-
 /* Containers & Flex */
 .center-container {
   display: flex;
@@ -65,7 +55,6 @@
   align-items: center;
   height: 55vh;
 }
-
 .main-container {
   height: 20vh;
   display: flex;
@@ -75,14 +64,12 @@
   color: #000;
   gap: 2rem;
 }
-
 .comment-flexbox {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
-
 /* Miscellaneous Styles */
 .comment-text {
   margin: 12px 0;
@@ -91,18 +78,15 @@
   width: 35%;
   border-radius: 5px;
 }
-
 .input-box {
   height: 75px;
   width: 35vw;
   background-color:transparent;
   border-radius: 5px;
 }
-
 h3 {
   color: teal;
 }
-
 /* Button Styles */
 .comment-button {
   appearance: button;
@@ -123,22 +107,18 @@ h3 {
   user-select: none;
   -webkit-user-select: none;
 }
-
 .comment-button:hover,
 .comment-button:focus {
   text-decoration: none;
 }
-
 .comment-button:active {
   box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
   outline: 0;
 }
-
 .comment-button:not([disabled]):active {
   box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
   transform: translate(2px, 2px);
 }
-
 /* Media Queries */
 @media (min-width: 768px) {
   .button-50 {

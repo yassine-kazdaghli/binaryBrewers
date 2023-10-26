@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./index.css";
 import Navigation from "./components/nav/nav.jsx";
@@ -9,6 +9,9 @@ import Projects from "./components/Projects";
 import Logo from "./components/nav/logo/logo";
 import ContactPage from "./components/ContactPage";
 import { ThemeProvider } from "./ThemeContext";
+import axios from "axios";
+import Cookies from "js-cookie";
+
 import {
   ThemeProvider as MUIThemeProvider,
   createTheme,
@@ -27,7 +30,14 @@ function App() {
   const toggleTheme = () => {
     setCurrentTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
-
+  useEffect(() => {
+    const token = Cookies.get("token");
+    if (token) {
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    } else {
+      delete axios.defaults.headers.common["Authorization"];
+    }
+  }, []);
   return (
     <ThemeProvider value={{ currentTheme, toggleTheme }}>
       <MUIThemeProvider
