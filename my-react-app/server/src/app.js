@@ -1,4 +1,4 @@
-// /backend/server.js
+// /backend/app.js
 
 import express from 'express';
 import mongoose from 'mongoose';
@@ -7,6 +7,10 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
 import { errorHandler } from './middlewares/errorMiddleware.js'
 import contactRoutes from './routes/contactRoutes.js';
+import commentRoutes from './routes/commentRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+import cookieParser from 'cookie-parser';
+import postRoutes from './routes/postRoutes.js';
 
 dotenv.config();
 
@@ -22,11 +26,16 @@ app.use(cors({
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
+app.use(cookieParser())
 
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/users',userRoutes)
 app.use('/api/contact', contactRoutes);
+app.use('/api/comments', commentRoutes);
+app.use('/api/posts', postRoutes);
+
 
 // Error handler middleware
 app.use(errorHandler);
