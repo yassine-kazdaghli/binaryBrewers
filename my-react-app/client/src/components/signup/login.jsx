@@ -80,6 +80,7 @@ export default function Login() {
 
 
   return (
+    <div className="login">
     <MDBContainer className="p-3 my-5 d-flex flex-column w-50 m-auto">
       <MDBTabs
         pills
@@ -229,5 +230,6 @@ export default function Login() {
         </MDBTabsPane>
       </MDBTabsContent>
     </MDBContainer>
+    </div>
   );
 }

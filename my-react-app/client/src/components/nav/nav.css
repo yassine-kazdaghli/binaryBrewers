@@ -1,0 +1,10 @@
+.white-navbar {
+  background-color: white;
+  color: black;
+}
+
+/* For the black navbar in light mode */
+.black-navbar {
+  background-color: black;
+  color: white;
+}

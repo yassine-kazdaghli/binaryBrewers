@@ -22,15 +22,13 @@ const InteractiveBackground = (props) => {
 
   return (
     <Particles
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={{
-        background: {
-          color: {
-            value: "#111",
-          },
-        },
+    id="tsparticles"
+    init={particlesInit}
+    loaded={particlesLoaded}
+    options={{
+      background: {
+        color: props.currentTheme === "light" ? "#fff" : "#111",
+      },
         fullScreen: {
           enable: true,
           zIndex: -10,
@@ -58,7 +56,7 @@ const InteractiveBackground = (props) => {
         },
         particles: {
           color: {
-            value: ["#111","#ffffff","009b9b"]
+            value: ["#EDE1D5","#ffffff","#000000"]
           // 
            // animation: {
              // enable: true,
@@ -75,17 +73,17 @@ const InteractiveBackground = (props) => {
           },
           move: {
             attract: {
-              enable: false,
+              enable: true,
               rotate: {
                 x: 600,
                 y: 600,
               },
             },
-            bounce: false,
+            bounce: true,
             direction: "none",
             enable: true,
             outMode: "out",
-            random: false,
+            random: true,
             speed: 0.3,
             straight: false,
           },
@@ -99,7 +97,7 @@ const InteractiveBackground = (props) => {
           opacity: {
             anim: {
               enable: true,
-              opacity_min: 0.2,
+              opacity_min: 0.5,
               speed: 1,
               sync: true,
             },
@@ -126,7 +124,7 @@ const InteractiveBackground = (props) => {
           size: {
             anim: {
               enable: false,
-              size_min: 10,
+              size_min: 6,
               speed: 4,
               sync: false,
             },
@@ -136,9 +134,9 @@ const InteractiveBackground = (props) => {
         },
         polygon: {
           draw: {
-            enable: false,
-            lineColor: "#009B9B",
-            lineWidth: 0.5,
+            enable: true,
+            lineColor: "#000000",
+            lineWidth: 0.2,
           },
           move: {
             radius: 25,

@@ -2,6 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
+}
+
+.blog{
+  background-color: transparent;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;  /* Ensure no child elements overflow the rounded corners */
+  width: 80%;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  justify-content: center;
 }
 /* Blog Post Styles */
 .blog-post {
@@ -21,7 +32,11 @@
 .blog-post p {
   font-size: 1.1rem;
   line-height: 1.5;
-  color:#000
+
+  color:white;
+  
+  
+
 }
 /* Comments Section */
 .comment-list {
@@ -63,6 +78,7 @@
   align-items: center;
   color: #000;
   gap: 2rem;
+  
 }
 .comment-flexbox {
   display: flex;

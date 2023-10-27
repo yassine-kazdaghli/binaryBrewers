@@ -6,7 +6,8 @@ function PodcastPage() {
   return <div className='podcasts'>
    <CardExampleCard/>
       
-  </div>;
+  
+  </div>
 }
 
 export default PodcastPage;
