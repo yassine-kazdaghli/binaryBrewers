@@ -59,12 +59,12 @@ const DevelopersCard = () => {
       stopOnHover={true}
       emulateTouch={true}
       swipeable={true}
-      centerSlidePercentage={55}
+      centerSlidePercentage={50}
       centerMode={true}
       dynamicHeight={false}
       width="auto"
       useKeyboardArrows={true}
-      autoFocus={true}
+      autoFocus={false}
     >
       {carouselData.map((item, index) => (
         <div key={index} className="Devs" style={{backgroundColor: 'black'}}>

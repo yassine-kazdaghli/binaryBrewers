@@ -56,7 +56,7 @@ function Navigation(props) {
   };
 
   // Define a CSS class for the navigation bar based on the current theme
-  const navbarClass = currentTheme === "light" ? "white-navbar" : "";
+  const navbarClass = currentTheme === "light" ? "light-navbar" : "dark-navbar";
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -85,7 +85,7 @@ function Navigation(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" className={navbarClass}>
+      <AppBar component="nav" className={`navbar ${navbarClass}`}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -106,7 +106,7 @@ function Navigation(props) {
                   marginRight: "16px",
                   backgroundColor: "black",
                   borderRadius: "5px",
-                  filter: "invert(100%)",
+                  
                   
                 }}
               />
@@ -117,17 +117,17 @@ function Navigation(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           ></Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{ color: currentTheme === "light" ? "black" : "white" }}
-                onClick={() => navigate(`/${item.toLowerCase()}`)}
-              >
-                {item}
-              </Button>
-            ))}
-          </Box>
+          {navItems.map((item) => (
+  <Button
+    key={item}
+    sx={{
+      color: currentTheme === "light" ? "white" : "black",
+    }}
+    onClick={() => navigate(`/${item.toLowerCase()}`)}
+  >
+    {item}
+  </Button>
+))}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {currentTheme === "dark" ? <Brightness7Icon sx={{ marginRight: 1 }} /> : <Brightness4Icon sx={{ marginRight: 1 }} />}
             <Switch

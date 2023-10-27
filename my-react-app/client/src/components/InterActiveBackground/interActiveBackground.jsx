@@ -73,7 +73,7 @@ const InteractiveBackground = (props) => {
           },
           move: {
             attract: {
-              enable: false,
+              enable: true,
               rotate: {
                 x: 600,
                 y: 600,
@@ -97,7 +97,7 @@ const InteractiveBackground = (props) => {
           opacity: {
             anim: {
               enable: true,
-              opacity_min: 0.2,
+              opacity_min: 0.5,
               speed: 1,
               sync: true,
             },
@@ -124,7 +124,7 @@ const InteractiveBackground = (props) => {
           size: {
             anim: {
               enable: false,
-              size_min: 10,
+              size_min: 6,
               speed: 4,
               sync: false,
             },
@@ -134,9 +134,9 @@ const InteractiveBackground = (props) => {
         },
         polygon: {
           draw: {
-            enable: false,
-            lineColor: "#009B9B",
-            lineWidth: 0.5,
+            enable: true,
+            lineColor: "#000000",
+            lineWidth: 0.2,
           },
           move: {
             radius: 25,

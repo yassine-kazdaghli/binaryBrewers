@@ -1,5 +1,10 @@
 .white-navbar {
-    background-color: #fff; /* White background color */
-    color: #000; /* Black text color or your desired color */
-    /* Add other styles as needed */
-  }
+  background-color: white;
+  color: black;
+}
+
+/* For the black navbar in light mode */
+.black-navbar {
+  background-color: black;
+  color: white;
+}
