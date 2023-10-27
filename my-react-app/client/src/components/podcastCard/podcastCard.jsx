@@ -12,7 +12,7 @@ const CardExampleCard = () => {
       sx={{ 
         display: 'flex', 
         flexDirection: 'column', // Changed to column for better organization
-        width: '80%', 
+        width: '65%', 
         height: 'auto', // Use auto to ensure content fits
         backgroundColor: 'transparent', 
         color: 'whitesmoke', 

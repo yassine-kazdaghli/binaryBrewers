@@ -28,7 +28,7 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;  /* Ensure no child elements overflow the rounded corners */
-    width: 80%;
+    width: 65%;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
     
 }

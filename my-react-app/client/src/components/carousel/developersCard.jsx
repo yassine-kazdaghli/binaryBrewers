@@ -67,7 +67,7 @@ const DevelopersCard = () => {
       autoFocus={false}
     >
       {carouselData.map((item, index) => (
-        <div key={index} className="Devs" style={{backgroundColor: 'black'}}>
+        <div key={index} className="Devs" style={{backgroundColor: 'transparent'}}>
           <Grid columns={3} stackable>
             <Grid.Column>
               <Card >
