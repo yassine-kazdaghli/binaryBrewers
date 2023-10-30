@@ -6,7 +6,7 @@ import User from '../models/User.js';
 
 export const signup = async (req, res) => {
   try {
-    const { registerUsername, password, fullName, email } = req.body;
+    const { username, password, fullName, email } = req.body;
     console.log('Received signup data:', username, password, fullName, email);
 
     const userExists = await User.findOne({ username });
@@ -19,8 +19,10 @@ export const signup = async (req, res) => {
     const newUser = new User({ username, password: hashedPassword, fullName, email });
 
     await newUser.save();
-
-    res.status(201).json({ message: 'User registered successfully' });
+    const token = jwt.sign({ userId: newUser._id }, process.env.JWT_SECRET, {
+      expiresIn: '1h',
+    });
+    res.status(201).json({ token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });
@@ -47,7 +49,7 @@ export const login = async (req, res) => {
       expiresIn: '1h',
     });
 
-    res.status(200).json({ token });
+    res.status(200).json({ token, user });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });

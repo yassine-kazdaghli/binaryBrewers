@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import SendIcon from "@mui/icons-material/Send";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import "../contact/contactForm.css"
 
 const theme = createTheme({
   palette: {
@@ -95,9 +96,10 @@ function ContactForm() {
   };
 
   return (
+    <div className="contactForm">
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm">
-        <h1>Contact Us</h1>
+       
 
         {submitSuccess && <p>Thank you! Your message has been sent.</p>}
         {submitError && <p>Oops! There was an error submitting your message. Please try again later.</p>}
@@ -155,6 +157,7 @@ function ContactForm() {
         </form>
       </Container>
     </ThemeProvider>
+    </div>
   );
 }
 

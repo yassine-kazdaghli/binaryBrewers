@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 const contactSchema = mongoose.Schema(
   {
-    name: {
+    title: {
       type: String,
       required: true,
     },

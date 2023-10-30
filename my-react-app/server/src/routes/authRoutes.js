@@ -2,6 +2,7 @@ import express from 'express';
 import { body, validationResult } from 'express-validator';
 import { signup, login } from '../controllers/authController.js';
 
+
 const router = express.Router();
 
 // Define the signup route with validation

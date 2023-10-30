@@ -1,39 +1,46 @@
+// CommentForm.js
 import React, { useState } from "react";
-import "./Styles/BlogPost.css";
-import { useAuth } from "../../AuthContext";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+import api from "../../services/api";
 
-function CommentForm({ addComment }) {
-  const [comment, setComment] = useState("");
-  const { currentUser } = useAuth();
+const CommentForm = ({ addComment, postId }) => {
+  const [content, setContent] = useState("");
 
-  const onClickHandler = () => {
-    if (comment.trim() !== "") {
-      addComment({
-        text: comment,
-        username: currentUser ? currentUser.username : "Anonymous",
-        timestamp: new Date().toISOString(),
-        id: Date.now()
-      });
-      setComment("");
+  const handleCommentSubmit = async (e) => {
+    e.preventDefault();
+    const data = { content:content, postId: postId };
+    console.log(data)
+    try {
+      const response = await api.post(
+        "/api/comments",
+        { data },
+        { withCredentials: true }
+      );
+      addComment(response.data);
+      setContent("");
+    } catch (error) {
+      console.error("Error creating comment:", error);
     }
   };
 
   return (
-    <div className="main-container">
-      <div className="comment-flexbox">
-        <textarea
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-          className="input-box"
-          placeholder="comment here ..."
-          style={{ padding: "1rem" }}
-        />
-        <button onClick={onClickHandler} className="comment-button">
-          Submit
-        </button>
-      </div>
-    </div>
+    <form onSubmit={handleCommentSubmit}>
+      <textarea
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
+        placeholder="Write your comment here..."
+      ></textarea>
+      <Button
+        type="submit"
+        variant="contained"
+        color="secondary"
+        startIcon={<SendIcon />}
+      >
+        Post Comment
+      </Button>
+    </form>
   );
-}
+};
 
 export default CommentForm;

@@ -45,6 +45,7 @@ const carouselData = [
 
 const DevelopersCard = () => {
   return (
+    <div className="developers-section">
     <Carousel
       className="carousel"
       showArrows={true}
@@ -58,33 +59,31 @@ const DevelopersCard = () => {
       stopOnHover={true}
       emulateTouch={true}
       swipeable={true}
-      centerSlidePercentage={100}
+      centerSlidePercentage={50}
       centerMode={true}
       dynamicHeight={false}
-      width="35%"
+      width="auto"
       useKeyboardArrows={true}
-      autoFocus={true}
+      autoFocus={false}
     >
       {carouselData.map((item, index) => (
         <div key={index} className="Devs" style={{backgroundColor: 'black'}}>
           <Grid columns={3} stackable>
             <Grid.Column>
-              <Card fluid>
+              <Card >
                 {" "}
                 {/* Use "fluid" to make the card responsive */}
                 <Image
                   src={item.imageUrl}
                   ui={true}
-                  sx={{ backgroundColor: "none" }}
+                  sx={{ backgroundColor: "white" }}
                 />
-                <CardContent>
-                  <Typography variant="h5" component="div" style={{color:'white'}}>
+                <CardContent sx={{ backgroundColor: "white" }}>
+                  <Typography variant="h5" component="div">
                     {item.title}
                   </Typography>
-                  <Typography variant="body2" style={{color:'white'}}>
-                    {item.content}
-                  </Typography>
-                  <Typography variant="body2" style={{color:'white'}}>
+                  
+                  <Typography variant="body2" >
                     {item.description}
                   </Typography>
                   <div className="iconContainer">
@@ -132,7 +131,22 @@ const DevelopersCard = () => {
         </div>
       ))}
     </Carousel>
+    <div className="about-us-description">
+    <h2>About Us</h2>
+        <p>
+          We are Yassine, Riccardo, and Mads - three passionate web developers hailing from DCI. Our journey began in the virtual halls of web development learning, where the synergy of our diverse backgrounds, interests, and skills sparked the idea for this podcast.
+        </p>
+        <p>
+          From our distinct perspectives - Yassine with his unmatched ability to sell you sand in the Sahara and linguistic prowess; Riccardo, the connoisseur of minimalistic design with an insatiable thirst for the perfect espresso; to Mads, the art-school dropout with a DIY approach to web development and life, we realized that we had a unique voice.
+        </p>
+        <p>
+          But this podcast isn't just about us. It's a reflection of our collective experiences, challenges, and growth in the realm of web development. As we delve deeper into the MERN stack, we wanted to share our journey, and thus, this podcast website was born. It's a convergence of our love for coding, craft beer, and candid conversations. We invite you to join us on this adventure. Listen, laugh, learn, and let's navigate the dynamic world of web development together.
+        </p>
+      </div>
+    </div>
   );
 };
 
 export default DevelopersCard;
+
+

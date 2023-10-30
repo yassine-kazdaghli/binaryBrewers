@@ -21,6 +21,7 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import ThemeContext from "../../ThemeContext";
 import { useContext } from "react";
+import "../nav/nav.css"
 
 const lightTheme = createTheme({
   palette: {
@@ -54,6 +55,9 @@ function Navigation(props) {
     toggleTheme();
   };
 
+  // Define a CSS class for the navigation bar based on the current theme
+  const navbarClass = currentTheme === "light" ? "light-navbar" : "dark-navbar";
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -74,13 +78,14 @@ function Navigation(props) {
     </Box>
   );
 
-  const container = 
+  const container =
     window !== undefined ? () => window().document.body : undefined;
+
 
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" className={`navbar ${navbarClass}`}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -101,7 +106,8 @@ function Navigation(props) {
                   marginRight: "16px",
                   backgroundColor: "black",
                   borderRadius: "5px",
-                  filter: "invert(100%)",
+                  
+                  
                 }}
               />
             </Link>
@@ -111,17 +117,17 @@ function Navigation(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           ></Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{ color: "white" }}
-                onClick={() => navigate(`/${item.toLowerCase()}`)}
-              >
-                {item}
-              </Button>
-            ))}
-          </Box>
+          {navItems.map((item) => (
+  <Button
+    key={item}
+    sx={{
+      color: currentTheme === "light" ? "white" : "black",
+    }}
+    onClick={() => navigate(`/${item.toLowerCase()}`)}
+  >
+    {item}
+  </Button>
+))}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {currentTheme === "dark" ? <Brightness7Icon sx={{ marginRight: 1 }} /> : <Brightness4Icon sx={{ marginRight: 1 }} />}
             <Switch
