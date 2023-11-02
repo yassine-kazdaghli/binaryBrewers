@@ -65,14 +65,10 @@ body {
   color: #0077b6; /* Color on hover */
 }
 .about-us-description {
-    padding: 20px;
-   background-color: transparent;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 90%;
-    text-align: center;
-    color: whitesmoke;
-}
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
 
 .about-us-description h2 {
     font-size: 24px;
@@ -83,3 +79,20 @@ body {
     font-size: 16px;
     margin-bottom: 15px;
 }
+
+/* developersCards.css */
+@media (max-width: 600px) {
+    .Devs {
+      padding: 10px;
+    }
+    .icon {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .icon {
+      font-size: 1rem;
+    }
+  }
+  

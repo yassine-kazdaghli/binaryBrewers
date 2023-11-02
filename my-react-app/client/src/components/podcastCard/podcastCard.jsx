@@ -5,7 +5,8 @@ import { useMusicPlayer } from '../mediaPlayer/musicPlayerContext';
 import PauseRounded from '@mui/icons-material/PauseRounded';
 
 const CardExampleCard = () => {
-  const { songs, currentIndex, isPlaying, playPrevious, playNext, handlePlayPause } = useMusicPlayer();
+  const { songs, currentIndex, paused, playPrevious, playNext, handlePlayPause } = useMusicPlayer();
+
 
   return (
     <Card 
@@ -46,7 +47,8 @@ const CardExampleCard = () => {
           <SkipPreviousIcon />
         </IconButton>
         <IconButton aria-label="play/pause" onClick={handlePlayPause}>
-          {isPlaying ?  <PauseRounded sx={{ height: 38, width: 38 }}  /> : <PlayArrowIcon sx={{ height: 38, width: 38 }} />}
+        {!paused ?  <PauseRounded sx={{ height: 38, width: 38 }}  /> : <PlayArrowIcon sx={{ height: 38, width: 38 }} />}
+
         </IconButton>
         <IconButton aria-label="next" onClick={playNext}>
           <SkipNextIcon />
