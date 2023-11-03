@@ -1,98 +1,52 @@
-/* Global Styles for Modern Font */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Styling for the Developer Cards */
-.Devs {
-    height: 100%;
-    color: black;
-    padding: 1rem;
-    width: max-content;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    
-}
-
-.Devs:hover {
-    transform: scale(1.1);
-}
-
-/* Carousel Styling */
-.carousel {
-   
-    
-   
-    background-color: transparent;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;  /* Ensure no child elements overflow the rounded corners */
-    width: 80%;
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
-    
-}
-
-
-
-/* Image Styling */
-.Devs img {
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.Devs img:hover {
-    transform: scale(1.03);
-}
-.Devs p{
-    color:black;
-}
-.iconContainer {
-  display: flex;
-  gap: 15px; /* Spacing between icons */
-  margin-top: 15px; /* Space between description and icons */
-  align-items: center;
-  justify-content: center;
-}
-
-.icon {
-  font-size: 24px; /* Icon size */
-  color: #555; /* Icon color */
-  transition: color 0.3s; /* Smooth color transition for hover effect */
-}
-
-.icon:hover {
-  color: #0077b6; /* Color on hover */
-}
-.about-us-description {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-
-.about-us-description h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.about-us-description p {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
 /* developersCards.css */
-@media (max-width: 600px) {
-    .Devs {
-      padding: 10px;
-    }
-    .icon {
-      font-size: 1.2rem;
-    }
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    max-height: 800px;
+    min-height: 600px;
   }
   
-  @media (max-width: 480px) {
-    .icon {
-      font-size: 1rem;
-    }
+  .card {
+    height: 379px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 70px 63px -60px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background 0.8s;
+  }
+  
+  .card:hover {
+    background-size: 600px;
+  }
+  
+  .iconContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon {
+    margin: 0 10px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .card:hover .icon {
+    opacity: 1;
+  }
+  
+  h2, p {
+    text-align: center;
+    color: white;
   }
   

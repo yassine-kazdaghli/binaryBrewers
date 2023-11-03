@@ -8,7 +8,7 @@ const Logo = () => {
       
       <img src={movingImageLogo} alt="logo" />
       <h1>Coding, Craft Beer, and Candid Conversations...</h1>
-     <p className='intro'> Join us as we delve deep into the world of tech, while sipping on some of the finest brews and engaging in unfiltered discussions.</p>
+    <button>sign up</button>
     </div>
   );
 };

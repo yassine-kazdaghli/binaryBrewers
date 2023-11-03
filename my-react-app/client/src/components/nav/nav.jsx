@@ -14,27 +14,15 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { createTheme } from "@mui/material/styles";
+
 import textBinaryBrewers from "../nav/navIcons/textBinaryBrewers.png";
 import Switch from "@mui/material/Switch";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import ThemeContext from "../../ThemeContext";
+import ThemeContext from "../../ThemeContext.js";
 import { useContext } from "react";
 
-const lightTheme = createTheme({
-  palette: {
-    mode: "light",
-    // Add other styles if needed
-  },
-});
 
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-    // Add other styles if needed
-  },
-});
 
 const drawerWidth = 240;
 const navItems = ["About", "Podcasts", "Blog", "contact", "login"];
