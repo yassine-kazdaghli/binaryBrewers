@@ -68,10 +68,11 @@ const DevelopersCard = () => {
     >
       {carouselData.map((item, index) => (
         <div key={index} className="Devs" style={{backgroundColor: 'black'}}>
-          <Grid columns={3} stackable>
+          <Grid columns={{ mobile: 1, tablet: 2, computer: 3 }} stackable>
+
             <Grid.Column>
               <Card >
-                {" "}
+                {"fluid "}
                 {/* Use "fluid" to make the card responsive */}
                 <Image
                   src={item.imageUrl}

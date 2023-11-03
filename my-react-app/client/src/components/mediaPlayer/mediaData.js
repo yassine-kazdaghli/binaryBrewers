@@ -1,8 +1,8 @@
  const podcastsData =[
     {
-      title: "Moonlight Sonata Op. 27 No. 2 - III. Presto",
-      artist: "Paul Pitman",
-      url: "https://files.musopen.org/recordings/4f63c71d-fd57-4665-998b-1005891b439e.mp3?filename=Paul+Pitman+-+Moonlight+Sonata+Op.+27+No.+2+-+III.+Presto.mp3&preview"
+      title: "Whats this about",
+      artist: "Mads J, Yassine K, Ricky V",
+      url: "https://res.cloudinary.com/dl1qfqyaw/video/upload/v1698917926/xnin02bj6vaodbtlsgs1.mp3"
     },
 
         {
