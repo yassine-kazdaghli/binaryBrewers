@@ -1,5 +1,5 @@
 import React from 'react';
-import './podcastPage.css'
+
 import CardExampleCard from './podcastCard/podcastCard';
 
 function PodcastPage() {

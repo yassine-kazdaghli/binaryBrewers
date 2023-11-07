@@ -18,6 +18,7 @@ const BlogPost = ({ post }) => {
 
 
     <div className="blog-post">
+      <h1>Blog</h1>
       <h2>{post.title}</h2>
       <p>{post.content}</p>
       <CommentList comments={comments} />

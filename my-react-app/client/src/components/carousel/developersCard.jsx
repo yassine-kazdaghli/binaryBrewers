@@ -43,20 +43,10 @@ const developersData = [
 ];
 
 return (
-  <div>
-  <div className="about-us-description">
-  <h2>About Us</h2>
-      <p>
-        We are Yassine, Riccardo, and Mads - three passionate web developers hailing from DCI. Our journey began in the virtual halls of web development learning, where the synergy of our diverse backgrounds, interests, and skills sparked the idea for this podcast.
-      </p>
-      <p>
-        From our distinct perspectives - Yassine with his unmatched ability to sell you sand in the Sahara and linguistic prowess; Riccardo, the connoisseur of minimalistic design with an insatiable thirst for the perfect espresso; to Mads, the art-school dropout with a DIY approach to web development and life, we realized that we had a unique voice.
-      </p>
-      <p>
-        But this podcast isn't just about us. It's a reflection of our collective experiences, challenges, and growth in the realm of web development. As we delve deeper into the MERN stack, we wanted to share our journey, and thus, this podcast website was born. It's a convergence of our love for coding, craft beer, and candid conversations. We invite you to join us on this adventure. Listen, laugh, learn, and let's navigate the dynamic world of web development together.
-      </p>
-    </div>
-    <div className="container">
+<div>  
+<div className="box-with-shadow">
+  <h1 className="header-about">About</h1>
+  <div className="container">
         {developersData.map((developer, index) => (
           <Card key={index} className="card">
             <Image src={developer.imageUrl} wrapped ui={false} />
@@ -84,9 +74,23 @@ return (
             </div>
           </Card>
         ))}
-      </div>
-    </div>
+      </div> 
+      {/* <br></br>
+      <div className="about-us-description">
+ 
+      <p>
+        We are Yassine, Riccardo, and Mads - three passionate web developers hailing from DCI. Our journey began in the virtual halls of web development learning, where the synergy of our diverse backgrounds, interests, and skills sparked the idea for this podcast.
+      </p>
+      <p>
+        From our distinct perspectives - Yassine with his unmatched ability to sell you sand in the Sahara and linguistic prowess; Riccardo, the connoisseur of minimalistic design with an insatiable thirst for the perfect espresso; to Mads, the art-school dropout with a DIY approach to web development and life, we realized that we had a unique voice.
+      </p>
+      <p>
+        But this podcast isn't just about us. It's a reflection of our collective experiences, challenges, and growth in the realm of web development. As we delve deeper into the MERN stack, we wanted to share our journey, and thus, this podcast website was born. It's a convergence of our love for coding, craft beer, and candid conversations. We invite you to join us on this adventure. Listen, laugh, learn, and let's navigate the dynamic world of web development together.
+      </p>
+    </div> */}
+  </div>
+  </div>
   );
-};
+  };
 
 export default DevelopersCard;

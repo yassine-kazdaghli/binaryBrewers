@@ -97,6 +97,7 @@ function ContactForm() {
 
   return (
     <div className="contactForm">
+      <h1>Contact</h1>
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm">
        

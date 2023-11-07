@@ -1,52 +1,70 @@
 /* developersCards.css */
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    height: 100vh;
-    max-height: 800px;
-    min-height: 600px;
-  }
-  
-  .card {
-    height: 379px;
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 70px 63px -60px #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    transition: background 0.8s;
-  }
-  
-  .card:hover {
-    background-size: 600px;
-  }
-  
-  .iconContainer {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-  }
-  
-  .icon {
-    margin: 0 10px;
-    opacity: 0;
-    transition: opacity 1s;
-  }
-  
-  .card:hover .icon {
-    opacity: 1;
-  }
-  
-  h2, p {
-    text-align: center;
-    color: white;
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  max-height: 800px;
+  min-height: 600px;
+}
+
+.box-with-shadow {
+  display: flex;
+
+  box-sizing: border-box; /* Makes sure padding doesn't add extra width */
+  max-width: 80vw; /* Ensure it doesn't overflow the viewport width */
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  height: 379px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 70px 63px -60px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.8s;
+}
+
+.card:hover {
+  background-size: 600px;
+}
+
+.iconContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  margin: 0 10px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.card:hover .icon {
+  opacity: 1;
+}
+
+h2,
+p {
+  text-align: center;
+  color: white;
+}
+h1 .header-about {
+  width: 100%;
+  margin: 0 auto;
+  background-color: green;
+  height: max-content;
+  text-align: center;
+}
