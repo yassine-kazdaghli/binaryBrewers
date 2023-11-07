@@ -1,13 +1,12 @@
 import React from "react";
-
-import { Card, Image, Grid } from "semantic-ui-react";
-import "semantic-ui-css/semantic.min.css"; // Import Semantic UI CSS
-import { CardContent, Typography } from "@mui/material";
+import { Card, Image } from "semantic-ui-react";
+import { Typography } from "@mui/material";
 import "./developersCards.css";
 import Yassine from "./images/Yassine.jpg";
 import Ricci from "./images/Ricci.png";
 import Mads from "./images/Mads.jpg";
-import { FaLinkedin, FaGithub, FaCodepen, FaGlobe } from "react-icons/fa"; // Import icons from react-icons
+import { FaLinkedin, FaGithub, FaCodepen, FaGlobe } from "react-icons/fa";
+
 
 const DevelopersCard = () => {
 const developersData = [
@@ -58,16 +57,12 @@ return (
     </div>
     <div className="container">
         {developersData.map((developer, index) => (
-          <Card key={index} className="card">
-            <Image src={developer.imageUrl} wrapped ui={false} />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {developer.title}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {developer.description}
-              </Typography>
-            </CardContent>
+          <div key={index} className="card">
+            <img src={developer.imageUrl} alt={developer.title} />
+            <div>
+              <h2>{developer.title}</h2>
+              <p>{developer.description}</p>
+            </div>
             <div className="iconContainer">
               <a href={developer.website} target="_blank" rel="noopener noreferrer" className="icon">
                 <FaGlobe />
@@ -82,7 +77,7 @@ return (
                 <FaCodepen />
               </a>
             </div>
-          </Card>
+          </div>
         ))}
       </div>
     </div>

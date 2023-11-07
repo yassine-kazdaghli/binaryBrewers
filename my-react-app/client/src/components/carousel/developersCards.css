@@ -1,52 +1,72 @@
 /* developersCards.css */
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    height: 100vh;
-    max-height: 800px;
-    min-height: 600px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: center; /* Center cards in the container */
+  align-items: flex-start; /* Align cards to the top */
+  gap: 20px; /* Add some space between cards */
+  padding: 20px; /* Add padding to the container */
+  min-height: 100vh; /* Adjust height to be at least the height of the viewport */
+}
+
+.card {
+  flex: 0 1 calc(33.333% - 40px); /* Each card takes up a third of the container width minus the gap */
+  max-width: 300px; /* Maximum width of the card */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Icons fadeIn effect on hover */
+.iconContainer {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover .iconContainer {
+  opacity: 1;
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Icon grows slightly on hover */
+}
+
+h2, p {
+  color: whitesmoke; /* Dark grey color for better readability */
+  margin: 0;
+  padding: 10px; /* Add padding around text */
+}
+
+@media (max-width: 1024px) {
   .card {
-    height: 379px;
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 70px 63px -60px #000000;
-    display: flex;
-    justify-content: center;
+    flex: 0 1 calc(50% - 40px); /* Each card takes up half of the container width */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack cards on smaller screens */
     align-items: center;
-    position: relative;
-    transition: background 0.8s;
   }
-  
-  .card:hover {
-    background-size: 600px;
+  .card {
+    flex: 0 1 90%; /* Cards take more space on smaller screens */
   }
-  
-  .iconContainer {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-  }
-  
-  .icon {
-    margin: 0 10px;
-    opacity: 0;
-    transition: opacity 1s;
-  }
-  
-  .card:hover .icon {
-    opacity: 1;
-  }
-  
-  h2, p {
-    text-align: center;
-    color: white;
-  }
-  
+}
+
+/* Additional global styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Modern font */
+  background: #f4f4f4; /* Light grey background */
+  color: #333; /* Dark text for readability */
+}
