@@ -25,12 +25,14 @@ const CommentForm = ({ addComment, postId }) => {
   };
 
   return (
-    <form onSubmit={handleCommentSubmit}>
-      <textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        placeholder="Write your comment here..."
-      ></textarea>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh' }}>
+  <form onSubmit={handleCommentSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <textarea
+      value={content}
+      onChange={(e) => setContent(e.target.value)}
+      placeholder="Write your comment here..."
+    ></textarea>
+    <div style={{ marginTop: '10px' }}>
       <Button
         type="submit"
         variant="contained"
@@ -39,7 +41,9 @@ const CommentForm = ({ addComment, postId }) => {
       >
         Post Comment
       </Button>
-    </form>
+    </div>
+  </form>
+</div>
   );
 };
 
