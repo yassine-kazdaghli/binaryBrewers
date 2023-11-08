@@ -40,6 +40,10 @@ text-align: start;
 
 }
 /* Comments Section */
+
+.form{
+  justify-content: center;
+}
 .comment-list {
   margin-top: 20px;
   padding-top: 20px;
