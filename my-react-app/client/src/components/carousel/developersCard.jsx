@@ -75,8 +75,8 @@ return (
           </Card>
         ))}
       </div> 
-      {/* <br></br>
-      <div className="about-us-description">
+     
+    {/* <div className="about-us-description">
  
       <p>
         We are Yassine, Riccardo, and Mads - three passionate web developers hailing from DCI. Our journey began in the virtual halls of web development learning, where the synergy of our diverse backgrounds, interests, and skills sparked the idea for this podcast.
@@ -87,7 +87,7 @@ return (
       <p>
         But this podcast isn't just about us. It's a reflection of our collective experiences, challenges, and growth in the realm of web development. As we delve deeper into the MERN stack, we wanted to share our journey, and thus, this podcast website was born. It's a convergence of our love for coding, craft beer, and candid conversations. We invite you to join us on this adventure. Listen, laugh, learn, and let's navigate the dynamic world of web development together.
       </p>
-    </div> */}
+    </div>  */}
   </div>
   </div>
   );

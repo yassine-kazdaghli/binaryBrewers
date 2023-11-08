@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
 #form1-password:focus {
     border-color: whitesmoke; /* Change 'blue' to your desired color */
   }

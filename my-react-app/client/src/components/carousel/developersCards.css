@@ -1,4 +1,11 @@
 /* developersCards.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
 .container {
   display: flex;
   justify-content: space-around;
@@ -59,7 +66,7 @@
 h2,
 p {
   text-align: center;
-  color: white;
+  color: black;
 }
 h1 .header-about {
   width: 100%;
