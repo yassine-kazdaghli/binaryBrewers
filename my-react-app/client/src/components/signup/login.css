@@ -1,20 +1,53 @@
+/* login.css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
-#form1-password:focus {
-    border-color: whitesmoke; /* Change 'blue' to your desired color */
-  }
+.login {
+  background-color: transparent;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  justify-content: center;
+}
 
- .login{
-     background-color: transparent;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;  /* Ensure no child elements overflow the rounded corners */
-    width: 80%;
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
-    justify-content: center;
- }
+.login-container {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(300px, 3fr));
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .login-container {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 40px;
+  }
+}
+
+.login-form {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+.login-input {
+  background-color: white;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.login-checkbox {
+  color: white;
+}
+
+.login-btn {
+  background-color: white;
+  color: black;
+  width: 100%;
+}

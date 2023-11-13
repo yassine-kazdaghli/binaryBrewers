@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
 .container {
@@ -18,9 +17,8 @@
 
 .box-with-shadow {
   display: flex;
-
-  box-sizing: border-box; /* Makes sure padding doesn't add extra width */
-  max-width: 80vw; /* Ensure it doesn't overflow the viewport width */
+  box-sizing: border-box;
+  max-width: 80vw;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
   margin: 0 auto;
   border-radius: 10px;
@@ -33,15 +31,38 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 70px 63px -60px #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  transition: 0.8s;
+  transition: transform 0.3s, background-size 0.8s;
 }
 
 .card:hover {
   background-size: 600px;
+  transform: scale(1.05); /* Adjust the scale factor as needed */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.2); /* Adjust the scale factor for the image zoom effect */
+}
+
+.card-content {
+  color: black;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Set the z-index to bring it on top of the image */
 }
 
 .iconContainer {
@@ -63,11 +84,11 @@
   opacity: 1;
 }
 
-h2,
-p {
+h2, p {
   text-align: center;
   color: black;
 }
+
 h1 .header-about {
   width: 100%;
   margin: 0 auto;
