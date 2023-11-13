@@ -39,3 +39,12 @@ h1{
     max-width: 80%;
   }
 }
+.homebtn{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-family: "Press Start 2P";
+
+}

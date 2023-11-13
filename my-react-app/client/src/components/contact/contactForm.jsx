@@ -96,8 +96,10 @@ function ContactForm() {
   };
 
   return (
+    <><h1 className="header-about"
+    >Contact</h1>
     <div className="contactForm">
-      <h1>Contact</h1>
+      
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm">
        
@@ -159,6 +161,7 @@ function ContactForm() {
       </Container>
     </ThemeProvider>
     </div>
+    </>
   );
 }
 

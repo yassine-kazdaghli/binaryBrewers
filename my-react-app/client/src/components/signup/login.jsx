@@ -80,8 +80,9 @@ export default function Login() {
 
 
   return (
+    <><h1 className="header-about">Login</h1>
     <div className="login">
-      <h1>Login</h1>
+      
     <MDBContainer className="p-3 my-5 d-flex flex-column w-50 m-auto">
       <MDBTabs
         pills
@@ -232,5 +233,6 @@ export default function Login() {
       </MDBTabsContent>
     </MDBContainer>
     </div>
+    </>
   );
 }

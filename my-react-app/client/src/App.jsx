@@ -23,7 +23,7 @@ import { AuthProvider } from "./AuthContext";
 import { MusicPlayerProvider } from "./components/mediaPlayer/musicPlayerContext";
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState("light");
+  const [currentTheme, setCurrentTheme] = useState("dark");
   const lightTheme = createTheme({ palette: { mode: "light" } });
   const darkTheme = createTheme({ palette: { mode: "dark" } });
 

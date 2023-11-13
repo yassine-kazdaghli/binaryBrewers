@@ -42,9 +42,10 @@ const developersData = [
 ];
 
 return (
-<div>  
+<div> 
+<h1 className="header-about">The Brewers</h1> 
 <div className="box-with-shadow">
-  <h1 className="header-about">About</h1>
+  
   <div className="container">
         {developersData.map((developer, index) => (
           <div key={index} className="card">

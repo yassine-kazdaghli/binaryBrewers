@@ -7,12 +7,14 @@
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content:safe;
   align-items: center;
   margin: 0 auto;
   height: 100vh;
   max-height: 800px;
   min-height: 600px;
+  padding: 45px;
+  
 }
 
 .box-with-shadow {
@@ -23,16 +25,19 @@
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
+  padding-right: 50px;
 }
 
 .card {
-  height: 379px;
+  height: max-content;
   width: 300px;
   border-radius: 10px;
-  overflow: hidden;
+  overflow:scroll;
   box-shadow: 0 70px 63px -60px #000000;
   position: relative;
   transition: transform 0.3s, background-size 0.8s;
+  padding: 15px;
+  margin-right:50px;
 }
 
 .card:hover {
@@ -63,37 +68,51 @@
   justify-content: center;
   align-items: center;
   z-index: 10; /* Set the z-index to bring it on top of the image */
+  margin-bottom: 25px;
 }
 
 .iconContainer {
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  font-size: 1.1rem;
+  
+  
 }
 
 .icon {
   margin: 0 10px;
   opacity: 0;
   transition: opacity 1s;
+  color: black;
+  
 }
 
 .card:hover .icon {
   opacity: 1;
+  font-size: 1.5rem;
+  
+  
+}
+.card:hover p, .card:hover h2{
+  display: none;
 }
 
 h2,
 p {
   text-align: center;
   color: black;
+  margin-bottom: 15px;
 }
 
-h1 .header-about {
-  width: 100%;
-  margin: 0 auto;
-  background-color: green;
-  height: max-content;
+.header-about{
+  
   text-align: center;
+  width: 100vw;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  font-size: xx-large;
 }

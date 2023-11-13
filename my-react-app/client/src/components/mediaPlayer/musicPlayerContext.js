@@ -7,7 +7,7 @@ export function MusicPlayerProvider({ children }) {
   const [volume, setVolume] = useState(1);
   const [songs] = useState(podcastsData); // You can populate this with your song data
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [currentPlaying, setCurrentPlaying] = useState(null); // New state for tracking current playing podcast URL
   const audioRef = useRef(null);
 
   
@@ -20,14 +20,21 @@ export function MusicPlayerProvider({ children }) {
     setCurrentIndex(prev => (prev + 1) % songs.length);
   };
 
-  const handlePlayPause = () => {
-    console.log('current song:', songs)
-    if (paused && audioRef.current) {
+  const handlePlayPause = (podcastUrl) => {
+    if (currentPlaying !== podcastUrl) {
+      audioRef.current.src = podcastUrl;
       audioRef.current.play();
+      setCurrentPlaying(podcastUrl);
+      setPaused(false);
     } else {
-      audioRef.current.pause();
+      if (paused && audioRef.current) {
+        audioRef.current.play();
+        setPaused(false);
+      } else {
+        audioRef.current.pause();
+        setPaused(true);
+      }
     }
-    setPaused(!paused);
   };
 
   const handleFastForward = () => {
@@ -63,7 +70,7 @@ const handlePreviousSong = () => {
   
 
   return (
-    <MusicPlayerContext.Provider value={{
+    <MusicPlayerContext.Provider value={{ currentPlaying,
       paused, handlePlayPause, volume, handleVolumeChange, songs, currentIndex, 
       handleFastForward, handleRewind, handleNextSong, handlePreviousSong, audioRef, playNext,
       playPrevious,
