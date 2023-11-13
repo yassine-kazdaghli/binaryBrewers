@@ -1,6 +1,6 @@
-import React from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
+import { useCallback } from "react";
 
 const InteractiveBackground = (props) => {
   const particlesInit = async (engine) => {
