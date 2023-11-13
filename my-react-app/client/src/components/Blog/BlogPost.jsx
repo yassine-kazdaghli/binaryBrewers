@@ -15,16 +15,17 @@ const BlogPost = ({ post }) => {
   const addComment = newComment => setComments(prevComments => [...prevComments, newComment]);
 
   return (
-
-
-    <div className="blog-post">
-      <h1>Blog</h1>
-      <h2>{post.title}</h2>
+<>
+<h1 className='header-about'>Blog</h1>
+    <div className="blog-post"
+    style={{ boxShadow: "0 0 10px 5px rgba(255, 255, 255, 0.3)" , width:"80vw" , margin:"0 auto" }}>
+      
+      <h2 >{post.title}</h2>
       <p>{post.content}</p>
       <CommentList comments={comments} />
       {currentUser ? <CommentForm addComment={addComment} postId={post._id} /> : <div><p>Please login to comment.</p></div>}
     </div>
-
+    </>
   );
 };
 
