@@ -68,7 +68,13 @@ function Navigation(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar 
+  component="nav" 
+  sx={{ 
+    bgcolor: currentTheme === "dark" ? "black" : "white", // Set background color based on theme
+    color: currentTheme === "dark" ? "white" : "black" // Optional: Adjust text color for better visibility
+  }}
+>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -100,17 +106,19 @@ function Navigation(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           ></Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{ color: "white" }}
-                onClick={() => navigate(`/${item.toLowerCase()}`)}
-              >
-                {item}
-              </Button>
-            ))}
-          </Box>
+         <Box sx={{ display: { xs: "none", sm: "block" } }}>
+  {navItems.map((item) => (
+    <Button
+      key={item}
+      sx={{ 
+        color: currentTheme === "dark" ? "white" : "black" // Set button text color based on theme
+      }}
+      onClick={() => navigate(`/${item.toLowerCase()}`)}
+    >
+      {item}
+    </Button>
+  ))}
+</Box>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {currentTheme === "dark" ? <Brightness7Icon sx={{ marginRight: 1 }} /> : <Brightness4Icon sx={{ marginRight: 1 }} />}
             <Switch

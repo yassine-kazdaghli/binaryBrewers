@@ -22,7 +22,7 @@ const developersData = [
   },
   {
     title: "Riccardo",
-    description: "", // Description for Card 2
+    description: "English and Journalism graduate still interested in bylines and hashtags, looking to exspand my skillset into Tech. Abit of frontend, abit of backend, a jack of all trades. The latest Hull ambassador stationed in Hamburg, has been described as the `archbishop of st pauli´.", // Description for Card 2
     imageUrl: Ricci, // Replace with your image URL
     website: "https://yassine.website.com",
     linkedin: "https://www.linkedin.com/in/yassine",

@@ -84,6 +84,7 @@ export default function MusicPlayer() {
       </Box>
 
       <audio ref={audioRef} src={songs[currentIndex]?.url} onEnded={handleNextSong} preload="auto"/>
+
     </Box>
   );
 }

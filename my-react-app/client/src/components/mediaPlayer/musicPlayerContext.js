@@ -21,18 +21,20 @@ export function MusicPlayerProvider({ children }) {
   };
 
   const handlePlayPause = (podcastUrl) => {
-    if (currentPlaying !== podcastUrl) {
-      audioRef.current.src = podcastUrl;
-      audioRef.current.play();
-      setCurrentPlaying(podcastUrl);
-      setPaused(false);
-    } else {
-      if (paused && audioRef.current) {
+    if (audioRef.current) {
+      if (currentPlaying !== podcastUrl) {
+        audioRef.current.src = podcastUrl;
         audioRef.current.play();
+        setCurrentPlaying(podcastUrl);
         setPaused(false);
       } else {
-        audioRef.current.pause();
-        setPaused(true);
+        if (paused) {
+          audioRef.current.play();
+          setPaused(false);
+        } else {
+          audioRef.current.pause();
+          setPaused(true);
+        }
       }
     }
   };
