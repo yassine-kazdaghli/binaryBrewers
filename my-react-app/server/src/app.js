@@ -12,7 +12,7 @@ import userRoutes from './routes/userRoutes.js';
 import cookieParser from 'cookie-parser';
 import postRoutes from './routes/postRoutes.js';
 
-dotenv.config();
+//dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5002;
